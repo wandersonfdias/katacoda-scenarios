@@ -34,8 +34,12 @@
   "assets": { 
     "host01": [ 
       {
-        "file": "resources/*.yaml",
-        "target": "/root/resources"
+        "file": "resources/services.yaml",
+        "target": "/root/resources/services.yaml"
+      },
+      {
+        "file": "resources/workloads.yaml",
+        "target": "/root/resources/workloads.yaml"
       } 
     ] 
   }

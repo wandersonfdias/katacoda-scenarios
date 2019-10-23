@@ -1,6 +1,6 @@
 {
   "title": "Cenario 01",
-  "description": "Descricao Cenario 01d",
+  "description": "Descricao Cenario 01e",
   "difficulty": "Beginner",
   "time": "1 hour",
   "details": {
@@ -32,7 +32,7 @@
     "imageid": "minikube-running"
   },
   "assets": { 
-    "client": [ 
+    "host01": [ 
       {
         "file": "services.yaml",
         "target": "/root/resources/"

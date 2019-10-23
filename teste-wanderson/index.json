@@ -31,7 +31,7 @@
   "backend": {
     "imageid": "minikube-running"
   },
-  "resources": { 
+  "assets": { 
     "client": [ 
       {
         "file": "services.yaml",

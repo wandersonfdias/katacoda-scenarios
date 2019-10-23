@@ -32,7 +32,7 @@
     "imageid": "minikube-running"
   },
   "assets": { 
-    "host01": [ 
+    "client": [ 
       {
         "file": "resources/services.yaml",
         "target": "/root/resources/services.yaml"

@@ -34,8 +34,8 @@
   "assets": { 
     "host01": [ 
       {
-        "file": "resources",
-        "target": "/root"
+        "file": "resources/*.yaml",
+        "target": "/root/resources"
       } 
     ] 
   }

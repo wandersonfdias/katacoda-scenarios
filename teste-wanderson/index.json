@@ -30,5 +30,6 @@
   },
   "backend": {
     "imageid": "minikube-running"
-  }
+  },
+  "assets": { "host01": [ {"file": "resources/*", "target": "/root/resources"} ] }
 }

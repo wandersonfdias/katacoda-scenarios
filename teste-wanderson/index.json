@@ -1,6 +1,6 @@
 {
   "title": "Cenario 01",
-  "description": "Descricao Cenario 01f",
+  "description": "Descricao Cenario 01g",
   "difficulty": "Beginner",
   "time": "1 hour",
   "details": {
@@ -35,11 +35,11 @@
     "host01": [ 
       {
         "file": "services.yaml",
-        "target": "/root/resources/"
+        "target": "/root"
       },
       {
         "file": "workloads.yaml",
-        "target": "~/"
+        "target": "/root"
       } 
     ] 
   }

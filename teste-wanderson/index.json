@@ -1,5 +1,5 @@
 {
-  "title": "Cenario 01a",
+  "title": "Cenario 01",
   "description": "Descricao Cenario 01",
   "difficulty": "Beginner",
   "time": "1 hour",
@@ -31,5 +31,12 @@
   "backend": {
     "imageid": "minikube-running"
   },
-  "assets": { "host01": [ {"file": "resources/*", "target": "/root/resources"} ] }
+  "assets": { 
+    "host01": [ 
+      {
+        "file": "resources",
+        "target": "/root"
+      } 
+    ] 
+  }
 }

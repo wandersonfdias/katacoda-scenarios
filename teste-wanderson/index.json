@@ -24,8 +24,8 @@
     "finish": {
       "text": "finish.md"
     },
-    "assets": { 
-      "host01": [ 
+    "assets": {
+      "host01": [
         {
           "file": "services.yaml",
           "target": "/root/resources"
@@ -33,8 +33,8 @@
         {
           "file": "workloads.yaml",
           "target": "/root/resources"
-        } 
-      ] 
+        }
+      ]
     }
   },
   "environment": {

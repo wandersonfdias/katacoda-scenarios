@@ -33,6 +33,10 @@
         {
           "file": "*.yaml",
           "target": "/root/resources"
+        },
+        {
+          "file": "*.png",
+          "target": "/root/images"
         }
       ]
     }

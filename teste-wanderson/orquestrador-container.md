@@ -2,10 +2,8 @@
 
 - Nos tempos antigos, tínhamos xxxx
 
-![Topologia](./assets/logo.png)
-
-![Minikube](/javajon/courses/kubernetes-fundamentals/minikube/assets/minikube.png "Minikube")
-
+![Topologia](wandersondias/scenarios/teste-wanderson/assets/logo.png)
+![Topologia 2](wandersondias/scenarios/teste-wanderson/images/logo.png)
 
 - Service discovery and load balancing
 Kubernetes can expose a container using the DNS name or using their own IP address. If traffic to a container is high, Kubernetes is able to load balance and distribute the network traffic so that the deployment is stable.

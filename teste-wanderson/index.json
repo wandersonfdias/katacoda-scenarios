@@ -1,13 +1,17 @@
 {
-  "title": "Cenario 01",
-  "description": "Descricao Cenario 01a",
-  "difficulty": "Beginner",
-  "time": "1 hour",
+  "title": "Treinamento Kubernetes",
+  "description": "Treinamento básico/intermediário sobre Kubernetes",
+  "difficulty": "Beginner/Intermediate",
+  "time": "2~4 hours",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Porque Kubernetes?",
+        "text": "orquestrador-container.md"
+      },
+      {
+        "title": "Arquitetura básica de um cluster Kubernetes",
+        "text": "arquitetura-basica.md"
       },
       {
         "title": "Step 2",

@@ -38,6 +38,11 @@
           "file": "*.png",
           "target": "/root"
         }
+        ,
+        {
+          "file": "*.png",
+          "target": "/root/images"
+        }
       ]
     }
   },

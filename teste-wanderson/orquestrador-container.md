@@ -1,6 +1,10 @@
 # Orquestradores de containers - Quais problemas eles resolvem?
 
+- Nos tempos antigos, tínhamos xxxx
 
+![Topologia](./assets/logo.png)
+
+![Minikube](/javajon/courses/kubernetes-fundamentals/minikube/assets/minikube.png "Minikube")
 
 
 - Service discovery and load balancing

@@ -6,6 +6,10 @@
   "details": {
     "steps": [
       {
+        "title": "Evolução da topologia de infra",
+        "text": "evolucao-topologia-infra.md"
+      },
+      {
         "title": "Porque Kubernetes?",
         "text": "orquestrador-container.md"
       },
@@ -37,11 +41,6 @@
         {
           "file": "*.png",
           "target": "/root"
-        }
-        ,
-        {
-          "file": "*.png",
-          "target": "/root/images"
         }
       ]
     }

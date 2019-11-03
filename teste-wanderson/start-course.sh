@@ -1,11 +1,9 @@
 #!/bin/sh
 
-launch.sh
-
+minikube start
 
 source <(kubectl completion bash)
 
-#minikube start
 # enable dashboard
 minikube addons enable dashboard
 

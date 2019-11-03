@@ -1,7 +1,7 @@
 
 # Containers
 
-Containeres revolucionaram a forma de executar aplicações, permitindo várias abstrações.
+Containers revolucionaram a forma de executar aplicações, permitindo várias abstrações.
 No entanto, observando uma topologia produtiva, apenas isso não é suficiente.
 É necessário prever cenários mais complexos:
 - Minha aplicação caiu? Como ela pode se recuperar sem intervenção manual? 

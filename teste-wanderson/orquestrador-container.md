@@ -17,28 +17,20 @@ No entanto, observando uma topologia produtiva, apenas isso não é suficiente.
 
 Observando o gerenciamento de containers de forma produtiva, é necessário garantir alguns recursos, tais como:
 
-- "Service discovery" e "Load Balancing": O k8s permite expor um container através de um DNS ou ip. Existe um mecanismo de load balance que permite distribuir a carga entre os containers.
-
-Kubernetes can expose a container using the DNS name or using their own IP address. If traffic to a container is high, Kubernetes is able to load balance and distribute the network traffic so that the deployment is stable.
+- "Service discovery" e "Load Balancing": O k8s permite expor um container através de um DNS ou ip. Existe um mecanismo que permite distribuir a carga entre os containers.
 
 - "Storage orchestration": Kubernetes abstrai o uso de disco, permitindo uso de: disco local, discos atachados à uma nuvem e etc.
 
-Kubernetes allows you to automatically mount a storage system of your choice, such as local storages, public cloud providers, and more.
-
-- "Automated rollouts and rollbacks": Pode-se automatizar a forma de instalação/atualização das aplicações, bem como rollbacks em caso de falha. Tudo isso é feito de forma declarativa.
-
-You can describe the desired state for your deployed containers using Kubernetes, and it can change the actual state to the desired state at a controlled rate. For example, you can automate Kubernetes to create new containers for your deployment, remove existing containers and adopt all their resources to the new container.
+- "Automated rollouts and rollbacks": Pode-se automatizar a forma de instalação/atualização das aplicações, bem como rollbacks em caso de falha. Tudo isso é feito de forma declarativa e também via camada de apis.
 
 - "Automatic bin packing": É possível definir uso de recursos de memória e cpu para os containers. Com base nisso, o k8s consegue decidir o melhor node do cluster para rodar os containers, garantindo o melhor uso de recursos.
 
-You provide Kubernetes with a cluster of nodes that it can use to run containerized tasks. You tell Kubernetes how much CPU and memory (RAM) each container needs. Kubernetes can fit containers onto your nodes to make the best use of your resources.
-
 - "Self-healing": Através do conceito de observabilidade, é possível:
- - Reiniciar containers que estejam em falha;
- - "Matar" e substituir containers que não tenham resultado positivo na verificação de "health check";
- - Garantir que um container somente estará disponível para uso após a verificação de "health check".
+  - Reiniciar containers que estejam em falha;
+  - "Matar" e substituir containers que não tenham resultado positivo no processo de verificação da saúda de aplicação (*health check*);
+  - Garantir que um container somente estará disponível para uso após a verificação de *health check*.
 
-- "Secret and configuration management"
+- "Secret and configuration management": O k8s permite o gerenciamento de informações sensíveis (*secrets*) ou de configurações (*config maps*) para os containers. É possível atualizar essas informações sem necessidade de rebuild das imagens dos containers. 
 
 Kubernetes lets you store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys. You can deploy and update secrets and application configuration without rebuilding your container images, and without exposing secrets in your stack configuration.
     

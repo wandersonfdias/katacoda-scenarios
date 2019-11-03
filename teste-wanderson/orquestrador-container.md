@@ -1,3 +1,4 @@
+
 # Containers
 
 Containeres revolucionaram a forma de executar aplicações, permitindo várias abstrações.
@@ -16,27 +17,19 @@ No entanto, observando uma topologia produtiva, apenas isso não é suficiente.
 
 Observando o gerenciamento de containers de forma produtiva, é necessário garantir alguns recursos, tais como:
 
-## "Service discovery" e "Load Balancing"
-
-O k8s permite expor um container através de um DNS ou ip. Existe um mecanismo de load balance que permite distribuir a carga entre os containers.
+- "Service discovery" e "Load Balancing": O k8s permite expor um container através de um DNS ou ip. Existe um mecanismo de load balance que permite distribuir a carga entre os containers.
 
 Kubernetes can expose a container using the DNS name or using their own IP address. If traffic to a container is high, Kubernetes is able to load balance and distribute the network traffic so that the deployment is stable.
 
-### "Storage orchestration"
-
-Kubernetes abstrai o uso de disco, permitindo uso de: disco local, discos atachados à uma nuvem e etc.
+- "Storage orchestration": Kubernetes abstrai o uso de disco, permitindo uso de: disco local, discos atachados à uma nuvem e etc.
 
 Kubernetes allows you to automatically mount a storage system of your choice, such as local storages, public cloud providers, and more.
 
-- "Automated rollouts and rollbacks"
-
-Pode-se automatizar a forma de instalação/atualização das aplicações, bem como rollbacks em caso de falha. Tudo isso é feito de forma declarativa.
+- "Automated rollouts and rollbacks": Pode-se automatizar a forma de instalação/atualização das aplicações, bem como rollbacks em caso de falha. Tudo isso é feito de forma declarativa.
 
 You can describe the desired state for your deployed containers using Kubernetes, and it can change the actual state to the desired state at a controlled rate. For example, you can automate Kubernetes to create new containers for your deployment, remove existing containers and adopt all their resources to the new container.
 
-- "Automatic bin packing"
-
-É possível definir uso de recursos de memória e cpu para os containers. Com base nisso, o k8s consegue decidir o melhor node do cluster para rodar os containers, garantindo o melhor uso de recursos.
+- "Automatic bin packing": É possível definir uso de recursos de memória e cpu para os containers. Com base nisso, o k8s consegue decidir o melhor node do cluster para rodar os containers, garantindo o melhor uso de recursos.
 
 You provide Kubernetes with a cluster of nodes that it can use to run containerized tasks. You tell Kubernetes how much CPU and memory (RAM) each container needs. Kubernetes can fit containers onto your nodes to make the best use of your resources.
 

@@ -1,4 +1,15 @@
-[Kubernetes](https://kubernetes.io/) ou k8s *(k + 8 caracteres + s)* é uma plataforma open-source de orquestração de containers, que permite escalonamento, automatização de implantações e gerenciamento de aplicações. 
+# Containers
+
+Containeres revolucionaram a forma de executar aplicações, permitindo várias abstrações.
+No entanto, observando uma topologia produtiva, apenas isso não é suficiente.
+É necessário prever cenários mais complexos:
+- Minha app caiu? Como ela 
+
+# Kubernetes
+
+[Kubernetes](https://kubernetes.io/) ou k8s *(k + 8 caracteres + s)* é uma plataforma open-source de orquestração de containers.
+
+Observando subir os containers de forma produtiva, é necessário 
 
 Essa plataforma dispõe de recursos, tais como:
 

@@ -16,13 +16,13 @@ No entanto, observando uma topologia produtiva, apenas isso não é suficiente.
 
 Observando o gerenciamento de containers de forma produtiva, é necessário garantir alguns recursos, tais como:
 
-- "Service discovery" e "Load Balancing"
+## "Service discovery" e "Load Balancing"
 
 O k8s permite expor um container através de um DNS ou ip. Existe um mecanismo de load balance que permite distribuir a carga entre os containers.
 
 Kubernetes can expose a container using the DNS name or using their own IP address. If traffic to a container is high, Kubernetes is able to load balance and distribute the network traffic so that the deployment is stable.
 
-- "Storage orchestration"
+### "Storage orchestration"
 
 Kubernetes abstrai o uso de disco, permitindo uso de: disco local, discos atachados à uma nuvem e etc.
 

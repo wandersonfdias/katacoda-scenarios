@@ -12,6 +12,7 @@ As aplicações, com seus respectivos pacotes e biblioetecas, eram instaladas no
 - Infra Containerizada
 Containers também possuem seu sistema operacional, disco, cpu, memória e etc. No entanto, containers são mais leves do que as VMs.
 Afinal, o container pode rodar em qualquer ambiente: host físico, VM, nuvem etc.
+
 Além disso, containers possuem algumas características especiais:
 1. Agilidade para criar, realizar build e deploy
 2. Portabilidade para execução (nuvens, sistemas operacionais diversos)

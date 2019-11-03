@@ -41,9 +41,9 @@ You can describe the desired state for your deployed containers using Kubernetes
 You provide Kubernetes with a cluster of nodes that it can use to run containerized tasks. You tell Kubernetes how much CPU and memory (RAM) each container needs. Kubernetes can fit containers onto your nodes to make the best use of your resources.
 
 - "Self-healing": Através do conceito de observabilidade, é possível:
--- Reiniciar containers que estejam em falha;
--- "Matar" e substituir containers que não tenham resultado positivo na verificação de "health check";
--- Garantir que um container somente estará disponível para uso após a verificação de "health check".
+ - Reiniciar containers que estejam em falha;
+ - "Matar" e substituir containers que não tenham resultado positivo na verificação de "health check";
+ - Garantir que um container somente estará disponível para uso após a verificação de "health check".
 
 - "Secret and configuration management"
 

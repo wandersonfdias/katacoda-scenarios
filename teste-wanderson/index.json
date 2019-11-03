@@ -27,7 +27,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "minikube start"
     },
     "finish": {
       "text": "finish.md"

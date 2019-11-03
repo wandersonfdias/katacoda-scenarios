@@ -19,7 +19,7 @@ Observando o gerenciamento de containers de forma produtiva, é necessário gara
 
 - "Service discovery" e "Load Balancing": O k8s permite expor um container através de um DNS ou ip. Existe um mecanismo que permite distribuir a carga entre os containers.
 
-- "Storage orchestration": Kubernetes abstrai o uso de disco, permitindo uso de: disco local, discos atachados à uma nuvem e etc.
+- "Storage orchestration": Kubernetes abstrai o uso de disco, permitindo uso de: disco local, discos atachados à uma nuvem ou camada distribuída de armazenamento (NFS, Ceph, Gluster etc).
 
 - "Automated rollouts and rollbacks": Pode-se automatizar a forma de instalação/atualização das aplicações, bem como rollbacks em caso de falha. Tudo isso é feito de forma declarativa e também via camada de apis.
 

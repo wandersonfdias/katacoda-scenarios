@@ -50,7 +50,7 @@
         "text": "resource-label-annotation.md"
       },
       {
-        "title": "Realizar deploy de uma aplicação, a partir de uma imagem no registry",
+        "title": "Realizar deploy de uma aplicação de exemplo",
         "text": "app-deploy.md"
       },
       {

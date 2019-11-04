@@ -18,3 +18,4 @@ Nesse treinamento daremos uma visão sobre:
     - Logs
     - Resources
 8. Explorar dashboard do Kubernetes
+9. 

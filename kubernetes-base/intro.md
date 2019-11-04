@@ -12,9 +12,7 @@ Nesse treinamento daremos uma visão sobre:
     - Namespace
     - Deployment
     - Service
-    - POD
-    - Environment Variables, Configmaps
-    - Secrets
+    - POD e Environment Variables
     - Labels e annotations
 6. Realizar deploy de uma aplicação, a partir de uma imagem no registry
 7. Explorar informações sobre a apliçação instalada no cluster

@@ -38,4 +38,3 @@ spec:
   - NodePort: expõe o service através de um ip estático em cada node do cluster. Nesse tipo, o service é acessível interna e externamente (através do ip atrinuído e porta definida em *nodePort*).
   - LoadBalancer: expõe o service externamente utilizando um load balancer de um cloud provider.
   - ExternalName: define um alias de dns para exposição do service.
-

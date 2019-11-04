@@ -34,17 +34,9 @@
         "text": "resource-service.md"
       },
       {
-        "title": "Resource: POD",
+        "title": "Resource: POD e Environment Variables",
         "text": "resource-pod.md"
-      },
-      {
-        "title": "Resource: Environment Variables e Configmap",
-        "text": "resource-configmap.md"
-      },
-      {
-        "title": "Resource: Secrets",
-        "text": "resource-secret.md"
-      },
+      },      
       {
         "title": "Resource: Labels / Annotations",
         "text": "resource-label-annotation.md"

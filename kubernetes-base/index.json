@@ -22,8 +22,44 @@
         "text": "kubectl.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "Resource: Namespace",
+        "text": "resource-namespace.md"
+      },
+      {
+        "title": "Resource: Deployment",
+        "text": "resource-deployment.md"
+      },
+      {
+        "title": "Resource: Service",
+        "text": "resource-service.md"
+      },
+      {
+        "title": "Resource: POD",
+        "text": "resource-pod.md"
+      },
+      {
+        "title": "Resource: Environment Variables e Configmap",
+        "text": "resource-configmap.md"
+      },
+      {
+        "title": "Resource: Secrets",
+        "text": "resource-secret.md"
+      },
+      {
+        "title": "Resource: Labels / Annotations",
+        "text": "resource-label-annotation.md"
+      },
+      {
+        "title": "Realizar deploy de uma aplicação, a partir de uma imagem no registry",
+        "text": "app-deploy.md"
+      },
+      {
+        "title": "Explorar informações sobre a apliçação instalada no cluster",
+        "text": "app-explore.md"
+      },
+      {
+        "title": "Explorar dashboard kubernetes",
+        "text": "kubernetes-dashboard.md"
       }
     ],
     "intro": {

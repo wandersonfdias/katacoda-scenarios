@@ -17,7 +17,7 @@ Nesse treinamento daremos uma visão sobre:
     - Secrets
     - Labels e annotations
 6. Realizar deploy de uma aplicação, a partir de uma imagem no registry
-7. Explorar dashboard do Kubernetes
-8. Explorar informações sobre a apliçação instalada no cluster
+7. Explorar informações sobre a apliçação instalada no cluster
     - Logs
     - Resources
+8. Explorar dashboard do Kubernetes

@@ -32,5 +32,5 @@ spec:
 4. Define o nome do container a ser criado dentro da pod.
 5. Define a imagem utilizada para criação do container dentro da pod.
 6. Define variáveis de ambiente que serão definidas dentro do contexto ou sistema operacional do container.
-  a. Nome da variável de ambiente
-  b. Valor da variável de ambiente
+  - a. Nome da variável de ambiente
+  - b. Valor da variável de ambiente

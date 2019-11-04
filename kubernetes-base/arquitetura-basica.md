@@ -1,6 +1,6 @@
 O cluster de Kubernetes possui a seguinte arquitetura básica:
 
-![Arquitetura](/wandersondias/scenarios/teste-wanderson/assets/kubernetes-architecture.png)
+![Arquitetura](/wandersondias/scenarios/kubernetes-base/assets/kubernetes-architecture.png)
 
 Um cluster possui ao menos 01 master-node e 01 worker-node. Para termos alta disponibilidade, recomenda-se o uso de múltiplos master-nodes.
 

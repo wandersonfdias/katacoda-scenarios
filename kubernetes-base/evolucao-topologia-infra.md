@@ -1,6 +1,6 @@
 A topologia de infraestrutura evoluiu ao longo dos anos.
 
-![Topologia](/wandersondias/scenarios/teste-wanderson/assets/topologia-infra.png)
+![Topologia](/wandersondias/scenarios/kubernetes-base/assets/topologia-infra.png)
 
 ## Infra Tradicional
 As aplicações eram instaladas num sistema operacional de um host físico.

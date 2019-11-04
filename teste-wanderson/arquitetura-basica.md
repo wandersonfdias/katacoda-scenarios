@@ -1,6 +1,25 @@
-# Teste link interno
+O Kubernetes possui a seguinte arquitetura:
 
-- https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com/
+![Arquitetura](/wandersondias/scenarios/teste-wanderson/assets/kubernetes-architecture.png)
 
-- [Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/)
-    
+# Master
+
+- kuber-api-server: xxx
+
+- controller manager:
+  - node controller: abc
+  - cloud controller: def
+
+- scheduler: xxx
+
+- etcd: xxx
+
+# Worker Node
+
+- kubelet: xxx
+
+- kube-proxy: xxx
+
+- container runtime: xxx
+
+

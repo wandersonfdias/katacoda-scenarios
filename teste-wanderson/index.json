@@ -18,8 +18,8 @@
         "text": "arquitetura-basica.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "Demonstração de uso do kubectl",
+        "text": "kubectl.md"
       },
       {
         "title": "Step 3",

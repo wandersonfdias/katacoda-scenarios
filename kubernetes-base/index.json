@@ -38,10 +38,6 @@
         "text": "resource-pod.md"
       },      
       {
-        "title": "Resource: Labels / Annotations",
-        "text": "resource-label-annotation.md"
-      },
-      {
         "title": "Realizar deploy de uma aplicação de exemplo",
         "text": "app-deploy.md"
       },

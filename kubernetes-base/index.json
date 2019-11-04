@@ -48,7 +48,7 @@
       {
         "title": "Explorar dashboard kubernetes",
         "text": "kubernetes-dashboard.md"
-      }
+      } 
     ],
     "intro": {
       "text": "intro.md",

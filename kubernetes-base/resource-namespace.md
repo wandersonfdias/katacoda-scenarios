@@ -8,3 +8,4 @@ Comandos básicos:
 - `kubectl get ns`
 - `kubectl get ns <namespace>`
 - `kubectl create ns <namespace>`
+- `kubectl describe ns <namespace>`

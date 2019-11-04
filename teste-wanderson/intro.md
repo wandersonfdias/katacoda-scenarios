@@ -9,15 +9,12 @@ Nesse treinamento daremos uma visão sobre:
 3. Arquitetura básica de um cluster Kubernetes
 4. Demonstração de uso do kubectl
 5. Conceitos
-    - Contexto de autenticação
-    - Node
     - Namespace
     - Deployment
     - Service
     - POD
     - Environment Variables, Configmaps
     - Secrets
-    - Ingress
     - Labels e annotations
 6. Realizar deploy de uma aplicação, a partir de uma imagem no registry
 7. Explorar dashboard do Kubernetes

@@ -58,6 +58,12 @@
       "text": "finish.md"
     },
     "assets": {
+      "client": [
+        {
+          "file": "*.yaml",
+          "target": "/root/resources"
+        }
+      ],
       "host01": [
         {
           "file": "*.yaml",

@@ -58,13 +58,15 @@
       "text": "finish.md"
     },
     "assets": {
-      "client": [
+      "host01": [
         {
           "file": "*.yaml",
-          "target": "/root/resources"
-        }
-      ],
-      "host01": [
+          "target": "/root"
+        },
+        {
+          "file": "*.yaml",
+          "target": "~/"
+        },
         {
           "file": "*.yaml",
           "target": "/root/resources"
@@ -77,7 +79,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe"
+    "uilayout": "terminal-editor"
   },
   "backend": {
     "imageid": "minikube-running"

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+launch.sh
+
 minikube start
 
 source <(kubectl completion bash)

@@ -79,7 +79,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-editor"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "minikube-running"

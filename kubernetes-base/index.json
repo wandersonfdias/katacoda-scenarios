@@ -60,9 +60,25 @@
     "assets": {
       "host01": [
         {
-          "file": "*",
-          "target": "/root"
+          "file": "*.yaml",
+          "target": "/root/resources"
         },
+        {
+          "file": "*.png",
+          "target": "/root"
+        }
+      ],
+      "host02": [
+        {
+          "file": "*.yaml",
+          "target": "/root/resources"
+        },
+        {
+          "file": "*.png",
+          "target": "/root"
+        }
+      ],
+      "client": [
         {
           "file": "*.yaml",
           "target": "/root/resources"

@@ -44,7 +44,7 @@ Dentro da POD, visualize o conteúdo do arquivo montado na mesma: `cat /etc/conf
 
 Agora visualize informações do arquivo criado: `ls -lsa /etc/config/container.properties`{{execute}}
 
-Para sair da POD, execute: `exit`{{execute}}
+Para sair da POD, digite `exit` e pressione *enter*.
 
 Visualize a POD no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/).
 

@@ -26,6 +26,10 @@
         "text": "resource-secret.md"
       },
       {
+        "title": "Criando arquivos de configuração via volume em containers",
+        "text": "resource-configmap-volume.md"
+      },
+      {
         "title": "Health Management",
         "text": "resource-secret.md"
       },

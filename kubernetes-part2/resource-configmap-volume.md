@@ -36,6 +36,9 @@ spec:
 
 Para criar a POD, execute: `kubectl create -f resources/pod-volume-configmap.yaml`{{execute}}
 
+Monitore a criação da POD:
+`kubectl get events --watch`{{execute}} ou `kubectl describe pod pod-volume-configmap`{{execute}}
+
 Para visualizar os logs da POD, execute: `kubectl -n default logs -f pod-volume-configmap`{{execute}}
 
 Visualize a POD no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/).

@@ -12,7 +12,7 @@ spec:
       command: [ "/bin/sh", "-c", "env" ]
       envFrom: # 1
       - configMapRef: # 2
-          name: special-config # 3
+          name: my-config # 3
   restartPolicy: Never
 ```
 
@@ -21,6 +21,9 @@ spec:
 3. Nome do configmap que será associado ao container.
 
 Para criar a POD, execute: `kubectl create -f resources/pod-configmap-full.yaml`{{execute}}
+
+Monitore a criação da POD:
+`kubectl get events --watch`{{execute}} ou `kubectl describe pod pod-configmap-full`{{execute}}
 
 Para visualizar os logs da POD, execute: `kubectl -n default logs -f pod-configmap-full`{{execute}}
 

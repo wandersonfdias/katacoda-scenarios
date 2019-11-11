@@ -28,6 +28,9 @@ spec:
 
 Para criar a POD, execute: `kubectl create -f resources/pod-configmap-single.yaml`{{execute}}
 
+Monitore a criação da POD:
+`kubectl get events --watch`{{execute}} ou `kubectl describe pod pod-configmap-single`{{execute}}
+
 Para visualizar os logs da POD, execute: `kubectl -n default logs -f pod-configmap-single`{{execute}}
 **Importante:** Os logs exibidos referem-se à visualização das variáveis de ambiente do container, conforme definido na *linha 6* do YAML.
 

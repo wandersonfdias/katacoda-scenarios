@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap # 1
+metadata:
+  name: ucs-info # 2
+  namespace: default # 3
+data: # 4
+  name: teste
+  url: www.google.com
+  app.properties: |-
+    description="My description"
+    year=2019

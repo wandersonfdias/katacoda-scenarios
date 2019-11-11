@@ -24,6 +24,33 @@ Descreva o conteúdo do configmap:
 Exclua o configmap:
 `kubectl delete configmap teste`{{execute}}
 
-## 
+## Entendo a estrutura do configmap de forma declarativa
 
+```yaml
+apiVersion: v1
+kind: ConfigMap # 1
+metadata:
+  name: ucs-info # 2
+  namespace: default # 3
+data: # 4
+  name: teste
+  url: www.google.com
+  app.properties: |-
+    description="My description"
+    year=2019
+```
 
+1. Define o tipo do resource para o k8s, que nesse cenário é *ConfigMap*.
+2. Define o nome do configmagp que será instalado no namespace.
+3. Define o nome do namespace que para criação do configmap (*opcional*).
+4. Define as configurações expostas pelo configmap no formato chave/valor.
+
+## Criando o configmap de forma declarativa
+
+Criar o configmap através deum arquivo yaml:
+`kubectl create -f configmap.yaml`{{execute}}
+
+Descreva o conteúdo do configmap:
+`kubectl describe configmap teste`{{execute}}
+
+Visualize o configmap no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/).

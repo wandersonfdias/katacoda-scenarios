@@ -28,7 +28,7 @@ spec:
 4. Contém as configurações dos volumes que poderão ser montados nos containers.
 5. Identificação do volume que será configurado. Esse nome deve ser o mesmo definido no item **2**.
 6. Define que o volume estará associado a um determinado configmap.
-7. Nome do confimap referenciado.
+7. Nome do configmap referenciado.
 8. Lista de itens ou chaves do configmap que serão referenciados.
 9. Chave do configmap que será referenciada.
 10. Nome do arquivo físico que será criado no volume montado dentro do container. Nesse exemplo será criado um arquivo */etc/config/container.properties*, conforme definido nos itens **3** e **10**.

@@ -7,6 +7,3 @@ Nesse treinamento daremos uma visão sobre:
 1. Configmaps
 2. Secrets
 3. Volumes
-4. Health Management
-5. Escalonamento de PODs
-6. Rollout de Deployments

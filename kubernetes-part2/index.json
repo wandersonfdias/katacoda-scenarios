@@ -1,6 +1,6 @@
 {
-  "title": "Treinamento Kubernetes - Parte 2",
-  "description": "Treinamento intermediário sobre Kubernetes",
+  "title": "02. Kubernetes - Configurações e Armazenamento",
+  "description": "Conceituação e exemplos práticos de configmaps, secrets e volumes.",
   "difficulty": "Intermediate",
   "time": "2 hours",
   "details": {
@@ -18,6 +18,10 @@
         "text": "resource-configmap-full-pod.md"
       },
       {
+        "title": "Criando arquivos de configuração via volume em containers",
+        "text": "resource-configmap-volume.md"
+      },
+      {
         "title": "Resource: Secret",
         "text": "resource-secret.md"
       },
@@ -26,23 +30,11 @@
         "text": "resource-secret-pod.md"
       },
       {
+        "title": "Associando secrets aos containers via volume",
+        "text": "resource-secret-volume.md"
+      },
+      {
         "title": "Volumes",
-        "text": "resource-volume.md"
-      },
-      {
-        "title": "Criando arquivos de configuração via volume em containers",
-        "text": "resource-configmap-volume.md"
-      },
-      {
-        "title": "Health Management",
-        "text": "resource-volume.md"
-      },
-      {
-        "title": "Escalonamento de PODs",
-        "text": "resource-volume.md"
-      },
-      {
-        "title": "Rollout de Deployments",
         "text": "resource-volume.md"
       }
     ],

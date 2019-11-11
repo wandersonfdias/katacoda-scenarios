@@ -1,8 +1,8 @@
 {
-  "title": "Treinamento Kubernetes",
-  "description": "Treinamento básico/intermediário sobre Kubernetes",
+  "title": "01. Kubernetes - Base",
+  "description": "Conceitos básicos de Kubernetes com explições e exemplos práticos.",
   "difficulty": "Beginner/Intermediate",
-  "time": "2~4 hours",
+  "time": "3 hours",
   "details": {
     "steps": [
       {

@@ -1,13 +1,13 @@
 {
     "courses": [
       {
-        "title": "Kubernetes Base",
+        "title": "01. Kubernetes Base",
         "description": "Conceitos básicos de Kubernetes com explições e exemplos práticos.",
         "id": "kubernetes-base"
       },
       {
-        "title": "Kubernetes Parte 2",
-        "description": "Evolução nos conceitos de Kubernetes com explições e exemplos práticos.",
+        "title": "02. Kubernetes - Configurações e Armazenamento",
+        "description": "Conceituação e exemplos práticos de configmaps, secrets e volumes.",
         "id": "kubernetes-part2"
       }
     ],

@@ -29,5 +29,8 @@ Descreva o conteúdo do PV:
 Criar POD com PVC através de um arquivo yaml: 
 `kubectl create -f resources/pod-pvc.yaml`{{execute}}
 
+Monitore a criação da POD:
+`kubectl get events --watch`{{execute}} ou `kubectl describe pod www`{{execute}}
+
 Verificar os arquivos criados dentro do PV: 
 `ls -lsa /data/data-0001`{{execute}}

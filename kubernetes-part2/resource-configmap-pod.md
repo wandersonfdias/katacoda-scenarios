@@ -31,4 +31,6 @@ Para criar a POD, execute: `kubectl create -f resources/pod-configmap-single.yam
 Para visualizar os logs da POD, execute: `kubectl -n default logs -f pod-configmap-single`{{execute}}
 **Importante:** Os logs exibidos referem-se à visualização das variáveis de ambiente do container, conforme definido na *linha 6* do YAML.
 
+Visualize a POD no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/).
+
 Agora remova a POD criada: `kubectl -n default delete pod pod-configmap-single`{{execute}}

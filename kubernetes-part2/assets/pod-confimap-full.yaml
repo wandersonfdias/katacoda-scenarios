@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-configmap-full
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh", "-c", "env" ]
+      envFrom: # 1
+      - configMapRef: # 2
+          name: special-config # 3
+  restartPolicy: Never
+  

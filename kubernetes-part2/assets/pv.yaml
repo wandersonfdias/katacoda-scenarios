@@ -10,6 +10,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain # 5
   nfs: # 6
-    server: 172.17.0.83 # 7
+    server: <IP_SERVER> # 7
     path: /data/data-0001 # 8
-    

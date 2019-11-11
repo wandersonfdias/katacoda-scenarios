@@ -9,7 +9,7 @@ spec:
   containers:
     - name: test-container
       image: k8s.gcr.io/busybox
-      command: [ "/bin/sh", "-c", "env" ]
+      command: [ "/bin/sh", "-c", "env" ] # 6
       env: # 1
         - name: SYSTEM # 2
           valueFrom:
@@ -24,12 +24,11 @@ spec:
 3. Define que o valor da variável de ambiente virá de um configmap.
 4. Nome do configmap que será associado ao container.
 5. Chave do configmap que será associada à variável de ambiente do container.
+6. Define o comando de execução do container.
 
 Para criar a POD, execute: `kubectl create -f resources/pod-configmap-single.yaml`{{execute}}
 
 Para visualizar os logs da POD, execute: `kubectl -n default logs -f pod-configmap-single`{{execute}}
+**Importante:** Os logs exibidos referem-se à visualização das variáveis de ambiente do container, conforme definido na *linha 6* do YAML.
 
-Para entrar na POD, execute: `kubectl -n default exec -it pod-configmap-single /bin/sh`{{execute}}
-Após entrar na POD, liste as variáveis de ambiente a partir do comando: `env`{{execute}}
-Para sair da POD, execute: `exit`{{execute}}
-
+Agora remova a POD criada: `kubectl -n default delete pod pod-configmap-single`{{execute}}

@@ -5,7 +5,7 @@ Características:
 - Permitem, quando associados a volumes, escrever arquivos dentro dos containers;
 - São úteis para armazenar e compartilhar informações não-sensíveis (informações sensíveis devem utilizar **Secrets**);
 - São únicos dentro de um namespace;
-- Podem ser acessados por todas PODs dentro de um namespace;
+- Podem ser acessados por todas PODs dentro de um namespace.
 
 ## Criando o configmap via kubectl
 
@@ -41,13 +41,13 @@ data: # 4
 ```
 
 1. Define o tipo do resource para o k8s, que nesse cenário é *ConfigMap*.
-2. Define o nome do configmagp que será instalado no namespace.
+2. Define o nome do configmap que será instalado no namespace.
 3. Define o nome do namespace que para criação do configmap (*opcional*).
 4. Define as configurações expostas pelo configmap no formato chave/valor.
 
 ## Criando o configmap de forma declarativa
 
-Criar o configmap através deum arquivo yaml:
+Criar o configmap através de um arquivo yaml:
 `kubectl create -f resources/configmap.yaml`{{execute}}
 
 Descreva o conteúdo do configmap:

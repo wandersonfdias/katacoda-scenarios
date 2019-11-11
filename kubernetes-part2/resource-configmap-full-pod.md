@@ -14,8 +14,8 @@ spec:
       - configMapRef: # 2
           name: special-config # 3
   restartPolicy: Never
-
 ```
+
 1. Define que todas propriedades do configmap serão associadas como variáveis de ambiente para o container.
 2. Define que um configmap será referenciado.
 3. Nome do configmap que será associado ao container.

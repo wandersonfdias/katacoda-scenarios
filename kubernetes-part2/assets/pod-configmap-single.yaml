@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-configmap-single
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh", "-c", "env" ]
+      env:
+        # define variaveis de ambientes
+        - name: SYSTEM
+          valueFrom:
+            configMapKeyRef:
+              # nome do configmap que sera associado ao container
+              name: my-config
+              # chave do configmap que sera associada ao container
+              key: system
+  restartPolicy: Never

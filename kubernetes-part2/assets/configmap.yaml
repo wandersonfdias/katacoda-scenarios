@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: ConfigMap # 1
+kind: ConfigMap
 metadata:
-  name: teste # 2
-  namespace: default # 3
-data: # 4
-  name: teste
+  name: my-config
+  namespace: default
+data:
+  system: crm
   url: www.google.com
   app.properties: |-
     description="My description"

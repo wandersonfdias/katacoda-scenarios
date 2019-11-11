@@ -10,7 +10,7 @@ Características:
 ## Criando o configmap via kubectl
 
 A linha abaixo criará um configmap de nome *teste* contendo 02 configurações:
-`kubectl create configmap teste --from-literal=name=teste --from-literal=url=www.google.com`{{execute}}
+`kubectl create configmap teste --from-literal=system=crm --from-literal=url=www.google.com`{{execute}}
 
 Verifique se o configmap foi criado corretamente:
 `kubectl get configmap teste`{{execute}}
@@ -30,10 +30,10 @@ Exclua o configmap:
 apiVersion: v1
 kind: ConfigMap # 1
 metadata:
-  name: ucs-info # 2
+  name: my-config # 2
   namespace: default # 3
 data: # 4
-  name: teste
+  system: crm
   url: www.google.com
   app.properties: |-
     description="My description"
@@ -51,6 +51,6 @@ Criar o configmap através deum arquivo yaml:
 `kubectl create -f resources/configmap.yaml`{{execute}}
 
 Descreva o conteúdo do configmap:
-`kubectl describe configmap teste`{{execute}}
+`kubectl describe configmap my-config`{{execute}}
 
 Visualize o configmap no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/).

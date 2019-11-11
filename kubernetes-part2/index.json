@@ -10,6 +10,10 @@
         "text": "resource-configmap.md"
       },
       {
+        "title": "Utilizando configmap em containers",
+        "text": "resource-configmap-pod.md"
+      },
+      {
         "title": "Resource: Secret",
         "text": "resource-secret.md"
       },

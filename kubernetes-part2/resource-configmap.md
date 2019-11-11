@@ -48,7 +48,7 @@ data: # 4
 ## Criando o configmap de forma declarativa
 
 Criar o configmap através deum arquivo yaml:
-`kubectl create -f configmap.yaml`{{execute}}
+`kubectl create -f resources/configmap.yaml`{{execute}}
 
 Descreva o conteúdo do configmap:
 `kubectl describe configmap teste`{{execute}}

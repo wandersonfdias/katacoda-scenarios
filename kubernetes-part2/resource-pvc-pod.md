@@ -36,5 +36,14 @@ Criar POD com PVC através de um arquivo yaml:
 Monitore a criação da POD:
 `kubectl get events --watch`{{execute}} ou `kubectl describe pod www`{{execute}}
 
-Verificar os arquivos criados dentro do PV: 
-`ls -lsa /data/data-0001`{{execute}}
+Agora vamos criar um arquivo dentro do PV do nfs-server: 
+`docker exec -it nfs-server bash -c "echo 'Teste do PV com NFS!!!' > /exports/data-0001/index.html"`{{execute}}
+
+Após criado o arquivo no PV, vamos executar a POD na porta 80 para obter o conteúdo do arquivo gerado:
+`POD_IP=$(kubectl -n default describe pod www | grep IP | awk '{print $2}'); curl $POD_IP`{{execute}}
+
+Para confirmar que o arquivo foi realmente escrito no PV e associado via PVC à POD, basta entrar na POD:
+`kubectl  -n default exec -it www /bin/sh`{{execute}}
+
+Após isso, visualize o conteúdo do arquivo definido no *volumeMount* da POD:
+`cat /usr/share/nginx/html/index.html`{{execute}}

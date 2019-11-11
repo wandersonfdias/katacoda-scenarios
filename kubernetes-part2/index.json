@@ -1,0 +1,55 @@
+{
+  "title": "Treinamento Kubernetes - Parte 2",
+  "description": "Treinamento intermediário sobre Kubernetes",
+  "difficulty": "Intermediate",
+  "time": "2 hours",
+  "details": {
+    "steps": [
+      {
+        "title": "Resource: Configmap",
+        "text": "resource-configmap.md"
+      },
+      {
+        "title": "Resource: Secret",
+        "text": "resource-secret.md"
+      },
+      {
+        "title": "Volumes",
+        "text": "resource-secret.md"
+      },
+      {
+        "title": "Health Management",
+        "text": "resource-secret.md"
+      },
+      {
+        "title": "Escalonamento de PODs",
+        "text": "resource-secret.md"
+      },
+      {
+        "title": "Rollout de Deployments",
+        "text": "resource-secret.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "start-course.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*.yaml",
+          "target": "/root/resources"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

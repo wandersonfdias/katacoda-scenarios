@@ -26,7 +26,7 @@ spec:
 1. Define volumes que serão montados dentro do container.
 2. Identifica o volume que será montado.
 3. Path do volume que será montado dentro do container.
-4. Sub-path do volume que será montado dentro do container.
+4. Sub-path dentro do volume que será montado no container. Útil para montar múltiplos paths para um único volume dentro do container.
 5. Contém as configurações dos volumes que poderão ser montados nos containers.
 6. Identificação do volume que será configurado. Esse nome deve ser o mesmo definido no item **2**.
 7. Define que o volume estará associado a uma determinada secret.

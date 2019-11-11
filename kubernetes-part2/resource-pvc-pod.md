@@ -6,7 +6,7 @@ Nesse exemplo iremos:
 ## Criação do servidor de NFS
 
 A criação do NFS é para fins didáticos. Para criá-lo, execute o comando: 
-`docker run -d --net=host \ --privileged --name nfs-server \ katacoda/contained-nfs-server:centos7 \ /data/data-0001 /data/data-0002`{{execute}}
+`docker run -d --net=host    --privileged --name nfs-server    katacoda/contained-nfs-server:centos7    /data/data-0001 /data/data-0002`{{execute}}
 
 ## Criação do PV
 

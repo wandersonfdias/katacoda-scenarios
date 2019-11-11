@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume # 1
+metadata:
+  name: nfs-0001 # 2
+spec:
+  capacity:
+    storage: 2Gi # 3
+  accessModes: # 4
+    - ReadWriteOnce
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain # 5
+  nfs: # 6
+    server: 172.17.0.83 # 7
+    path: /data/data-0001 # 8
+    

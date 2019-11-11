@@ -36,6 +36,10 @@
       {
         "title": "Volumes",
         "text": "resource-volume.md"
+      },
+      {
+        "title": "Associando um volume persistente a uma POD",
+        "text": "resource-pvc-pod.md"
       }
     ],
     "intro": {

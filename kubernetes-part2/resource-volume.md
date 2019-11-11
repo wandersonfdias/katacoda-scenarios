@@ -51,6 +51,7 @@ spec:
 8. Define o path onde o volume persistente será criado fisicamente na camada de armazenamento de dados.
 
 ## Persistent Volume Clain (PVC)
+Área de armazenamento requisitada pelo cluster k8s para uso pelas PODs.
 
 ```yaml
 kind: PersistentVolumeClaim # 1
@@ -62,10 +63,10 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 100Mi # 4
+      storage: 500Mi # 4
 ```
 
 1. Define o tipo do resource para o k8s, que nesse cenário é *PersistentVolumeClaim*.
 2. Define o nome do PVC (persistent volume) que será definido no namespace para uso pelas PODs.
 3. Definição do tipo de acesso ao volume.
-4. Define o tamanho do armazenamento que será requisitado. Nesse exemplo, serão 100MB.
+4. Define o tamanho do armazenamento que será requisitado. Nesse exemplo, serão 500MB.

@@ -8,8 +8,7 @@ metadata:
 spec:
   containers:
     - name: volume-container
-      image: k8s.gcr.io/busybox
-      command: [ "/bin/sh","-c","sleep 1800" ]
+      image: chentex/random-logger
       volumeMounts: # 1
       - name: config-volume # 2
         mountPath: /etc/config # 3

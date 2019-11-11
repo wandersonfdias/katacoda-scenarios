@@ -17,8 +17,8 @@ spec:
               name: my-config # 4
               key: system # 5
   restartPolicy: Never
-
 ```
+
 1. Definição de variáveis de ambiente para o container.
 2. Define uma variável de ambiente de nome *SYSTEM*.
 3. Define que o valor da variável de ambiente virá de um configmap.

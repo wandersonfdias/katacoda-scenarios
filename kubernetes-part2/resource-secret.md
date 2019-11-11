@@ -46,7 +46,7 @@ data: # 4
 ## Criando a secret de forma declarativa
 
 Criar a secret através de um arquivo yaml:
-`kubectl create -f resources/sercret.yaml`{{execute}}
+`kubectl create -f resources/secret.yaml`{{execute}}
 
 Descreva o conteúdo da secret:
 `kubectl describe secret db-data`{{execute}}

@@ -22,8 +22,12 @@
         "text": "resource-secret.md"
       },
       {
+        "title": "Associando secrets aos containers",
+        "text": "resource-secret-pod.md"
+      },
+      {
         "title": "Volumes",
-        "text": "resource-secret.md"
+        "text": "resource-volume.md"
       },
       {
         "title": "Criando arquivos de configuração via volume em containers",
@@ -31,15 +35,15 @@
       },
       {
         "title": "Health Management",
-        "text": "resource-secret.md"
+        "text": "resource-volume.md"
       },
       {
         "title": "Escalonamento de PODs",
-        "text": "resource-secret.md"
+        "text": "resource-volume.md"
       },
       {
         "title": "Rollout de Deployments",
-        "text": "resource-secret.md"
+        "text": "resource-volume.md"
       }
     ],
     "intro": {

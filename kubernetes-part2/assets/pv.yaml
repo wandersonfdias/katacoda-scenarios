@@ -11,4 +11,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain # 5
   nfs: # 6
     server: <IP_SERVER> # 7
-    path: /data/data-0001 # 8
+    path: /exports/data-0001 # 8

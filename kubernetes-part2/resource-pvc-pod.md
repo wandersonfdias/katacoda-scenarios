@@ -12,7 +12,7 @@ A criação do NFS é para fins didáticos. Para criá-lo, execute o comando:
 
 Obtenha o ip do servidor: `ifconfig ens3 | grep "inet addr"`{{execute}}
 
-A partir do ip obtido acima (tag: *inet addr:), edite o arquivo do PV editando o ip do servidor (tag: *\<IP_SERVER\>*): `vi resources/pv.yaml`{{execute}}
+A partir do ip obtido acima (tag: *inet addr:), edite o arquivo do PV editando o ip do servidor (tag: \<IP_SERVER\>): `vi resources/pv.yaml`{{execute}}
 
 Criar o PV através de um arquivo yaml:
 `kubectl create -f resources/pv.yaml`{{execute}}

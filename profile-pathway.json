@@ -2,7 +2,7 @@
     "courses": [
       {
         "title": "01. Kubernetes Base",
-        "description": "Conceitos básicos de Kubernetes com explições e exemplos práticos.",
+        "description": "Conceitos básicos de Kubernetes com explicações e exemplos práticos.",
         "id": "kubernetes-base"
       },
       {

@@ -2,7 +2,7 @@
 
 launch.sh
 
-minikube start
+#minikube start
 
 source <(kubectl completion bash)
 

@@ -7,7 +7,7 @@ No deployment é possível definir regras para realizar:
 - estratégias de rollout;
     - Ex: Uma determinada app possui 03 pods.
       Ao realizar um novo rollout, que na nova versão define a quantidade mínima de 04 pods, pode-se definir que uma versão anterior da app somente será descartada, quando uma nova pod na nova versão for considerada como *válida* para o cluster. Esse comportamento pode ser demonstrado abaixo: 
-      ![Topologia](/wandersondias/scenarios/kubernetes-base/assets/deployment-rollout-strategy.png)
+      ![Topologia](/wandersondias/scenarios/kubernetes-part1/assets/deployment-rollout-strategy.png)
 - rollbacks de uma revisão anterior;
 - defnir estados de uma nova pod;
 - definir a quantidade de réplicas ou instâncias das pods que serão criadas;

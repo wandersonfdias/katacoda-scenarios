@@ -3,7 +3,7 @@
       {
         "title": "01. Kubernetes Base",
         "description": "Conceitos básicos de Kubernetes com explicações e exemplos práticos.",
-        "id": "kubernetes-base"
+        "id": "kubernetes-part1"
       },
       {
         "title": "02. Kubernetes - Configurações e Armazenamento",

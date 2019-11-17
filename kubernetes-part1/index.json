@@ -58,17 +58,13 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [        
-        {
-          "file": "*.png",
-          "target": "/root"
-        },
+      "host01": [
         {
           "file": "*.yaml",
           "target": "/root/resources"
         }
       ]
-    }
+    }    
   },
   "environment": {
     "uilayout": "terminal"

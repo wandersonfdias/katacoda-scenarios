@@ -60,14 +60,18 @@
     "assets": {
       "host01": [
         {
+          "file": "*.png",
+          "target": "/root"
+        },
+        {
           "file": "*.yaml",
           "target": "/root/resources"
         }
       ]
-    }    
+    }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "minikube-running"

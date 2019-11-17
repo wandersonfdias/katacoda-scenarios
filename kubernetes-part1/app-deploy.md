@@ -12,17 +12,18 @@ Essa aplicação deverá ser *deployada* no namespace *default*.
 
 Veja os arquivos dentro do diretório *resources*.
 - services.yaml: expõe as aplicações via NodePort.
-- workload.yaml: contém as referências de deployment para instalação das aplicações.
+  - `resources/services.yaml`{{open}}
+- workloads.yaml: contém as referências de deployment para instalação das aplicações.
+  - `resources/workloads.yaml`{{open}}
 
 ## Instalação da aplicação
-- `cd resources`
-- `kubectl apply -f services.yaml`
-- `kubectl apply -f workloads.yaml`
+- `kubectl apply -f resources/services.yaml`{{execute}}
+- `kubectl apply -f resources/workloads.yaml`{{execute}}
 
 ## Conferir se as aplicações subiram com sucesso
-- services: `kubectl -n default get services`
-- deployments: `kubectl -n default get deployments`
-- pods: `kubectl -n default get pods`
+- services: `kubectl -n default get services`{{execute}}
+- deployments: `kubectl -n default get deployments`{{execute}}
+- pods: `kubectl -n default get pods`{{execute}}
 
 ## Acessar a aplicação no browser
 Uma vez que a aplicação tiver subido corretamente, a mesma estará acessível através do link: [app](https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com/).

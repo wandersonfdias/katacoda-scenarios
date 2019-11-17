@@ -74,6 +74,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-running"
   }
 }

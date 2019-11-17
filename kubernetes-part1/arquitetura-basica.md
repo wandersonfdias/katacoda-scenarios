@@ -9,7 +9,7 @@ Um cluster possui ao menos 01 master-node e 01 worker-node. Para termos alta dis
 Tem a responsabilidade de gerenciar os worker-nodes e respectivos containers no cluster.
 Possui os seguintes componentes:
 
-- [kuber-api-server](https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver): Expõe a camada de apis do cluster. Realiza a comunicação entre master e worker nodes.
+- [kube-api-server](https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver): Expõe a camada de apis do cluster. Realiza a comunicação entre master e worker nodes.
 A camada de apis pode ser consumida por CLI (ex: *kubectl*) ou UI (ex: *kubernetes dashboard*).
 
 - [controller manager](https://kubernetes.io/docs/concepts/overview/components/#kube-controller-manager):

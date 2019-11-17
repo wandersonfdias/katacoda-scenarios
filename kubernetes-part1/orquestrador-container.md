@@ -27,7 +27,7 @@ Observando o gerenciamento de containers de forma produtiva, é necessário gara
 
 - "Self-healing": Através do conceito de observabilidade, é possível:
   - Reiniciar containers que estejam em falha;
-  - "Matar" e substituir containers que não tenham resultado positivo no processo de verificação da saúda de aplicação (*health check*);
+  - "Matar" e substituir containers que não tenham resultado positivo no processo de verificação da saúde de aplicação (*health check*);
   - Garantir que um container somente estará disponível para uso após a verificação de *health check*.
 
 - "Secret and configuration management": O k8s permite o gerenciamento de informações sensíveis (*secrets*) ou de configurações (*config maps*) para os containers. É possível atualizar essas informações sem necessidade de rebuild das imagens dos containers.

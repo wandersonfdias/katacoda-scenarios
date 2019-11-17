@@ -3,11 +3,11 @@
 Cada novo rollout de um deploy gera uma nova numeração de revisão no k8s.
 
 No deployment é possível definir regras para realizar:
-- rollouts de replicasets;
+- rollouts de [replicasets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/);
 - estratégias de rollout;
-    - Ex: Uma determinada app possui 03 pods.
-      Ao realizar um novo rollout, que na nova versão define a quantidade mínima de 04 pods, pode-se definir que uma versão anterior da app somente será descartada, quando uma nova pod na nova versão for considerada como *válida* para o cluster. Esse comportamento pode ser demonstrado abaixo: 
-      ![Topologia](/wandersondias/scenarios/kubernetes-part1/assets/deployment-rollout-strategy.png)
+  - Ex: Uma determinada app possui 03 pods.
+    Ao realizar um novo rollout, que na nova versão define a quantidade mínima de 04 pods, pode-se definir que uma versão anterior da app somente será descartada, quando uma nova pod na nova versão for considerada como *válida* para o cluster. Esse comportamento pode ser demonstrado abaixo: 
+    ![Topologia](/wandersondias/scenarios/kubernetes-part1/assets/deployment-rollout-strategy.png)
 - rollbacks de uma revisão anterior;
 - defnir estados de uma nova pod;
 - definir a quantidade de réplicas ou instâncias das pods que serão criadas;

@@ -58,14 +58,14 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [
-        {
-          "file": "*.yaml",
-          "target": "/root/resources"
-        },
+      "host01": [        
         {
           "file": "*.png",
           "target": "/root"
+        },
+        {
+          "file": "*.yaml",
+          "target": "/root/resources"
         }
       ]
     }
@@ -74,6 +74,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-running"
+    "imageid": "minikube-running"
   }
 }

@@ -22,8 +22,12 @@
         "text": "kubectl.md"
       },
       {
-        "title": "Resource: Labels e Annotations",
-        "text": "resource-label-annotation.md"
+        "title": "Resource: Labels",
+        "text": "resource-label.md"
+      },
+      {
+        "title": "Resource: Annotations",
+        "text": "resource-annotation.md"
       },
       {
         "title": "Resource: Namespace",

@@ -23,6 +23,8 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 3
         livenessProbe:
           httpGet:
             path: /
@@ -30,6 +32,8 @@ spec:
           initialDelaySeconds: 30
           periodSeconds: 30
           timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 3
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -55,6 +59,8 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 3
         livenessProbe:
           httpGet:
             path: /
@@ -62,3 +68,5 @@ spec:
           initialDelaySeconds: 30
           periodSeconds: 30
           timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 3

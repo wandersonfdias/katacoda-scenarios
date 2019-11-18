@@ -10,7 +10,19 @@
         "text": "health-management.md"
       },
       {
-        "title": "Testes de health check",
+        "title": "Health Management - HTTP Probe",
+        "text": "health-management-http.md"
+      },
+      {
+        "title": "Health Management - Command e TCP Probe",
+        "text": "health-management-command-tcp.md"
+      },
+      {
+        "title": "Testes de health check: Readiness Proble",
+        "text": "app-health-check-readiness.md"
+      },
+      {
+        "title": "Testes de health check: Liveness Proble",
         "text": "app-health-check.md"
       }
     ],

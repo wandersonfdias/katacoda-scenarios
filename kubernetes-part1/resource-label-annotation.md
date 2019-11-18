@@ -1,4 +1,4 @@
-[Label](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) são um conjuto de chave/valor que server para identificar objetos no cluster kubernetes.
+[Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) são um conjuto de chave/valor que servem para identificar objetos no cluster kubernetes.
 
 Características principais:
 - podem denotar algum significado para objetos no cluster;

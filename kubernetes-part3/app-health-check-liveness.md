@@ -1,28 +1,14 @@
-Nesse bloco, realizeremos o deploy de uma aplicação para testes de health check.
-
-O arquivo `resources/health-check.yaml`{{open}} contém 02 aplicações para teste:
-- aplicação que terá *sucesso* na execução do health check;
-- aplicação que terá *falha* na execução do health check.
-
-## Instalação da aplicação
-- `kubectl apply -f resources/health-check.yaml`{{execute}}
-
-## Verificação de Probe
+Nesse bloco, forçaremos uma falha num container, forçando uma falha na verificação de *liveness probe*.
 
 ### POD frontend
-A POD *frontend* é uma aplicação HTTP que sempre retorna sucesso nas verificações de readiness e liveness.
+A POD *frontend* criada no passo anterior está funcionando corretamente, sem nenhum restart.
 
-Para verificar o status, execute: `kubectl get pods --selector="app=frontend" -w`{{execute}}
+Para verificar o status, execute: `kubectl get pods --selector="app=frontend"`{{execute}}
 
-Para verificar os eventos dessa aplicação, execute: `kubectl get events | grep "/frontend"`{{execute}}
+Agora iremos forçar um *crash* na mesma, através de uma chamada interna no container: `POD=$(kubectl get pods --selector="app=frontend" --output=jsonpath={.items..metadata.name}) \ kubectl exec $POD -- /usr/bin/curl -s localhost/unhealthy`{{execute}}
 
-Agora dê um *describe* nessa pod: `POD=$(kubectl get pods --selector="app=frontend" --output=jsonpath={.items..metadata.name}); kubectl describe pod $POD`{{execute}}
+Para verificar os eventos dessa aplicação, execute: `kubectl get events -w | grep "/frontend"`{{execute}}
 
-### POD bad-frontend
-A POD *bad-frontend* é uma aplicação HTTP que sempre retorna sucesso nas verificações de readiness e liveness.
+Agora, vamos verificar o status observando os restarts da mesma: `kubectl get pods --selector="app=frontend" -w`{{execute}}
 
-Para verificar o status, execute: `kubectl get pods --selector="app=bad-frontend" -w`{{execute}}
-
-Para verificar os eventos dessa aplicação, execute: `kubectl get events | grep "/bad-frontend"`{{execute}}
-
-Agora dê um *describe* nessa pod: `POD=$(kubectl get pods --selector="app=bad-frontend" --output=jsonpath={.items..metadata.name}); kubectl describe pod $POD`{{execute}}
+Dica: xxxx

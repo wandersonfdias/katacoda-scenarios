@@ -2,7 +2,7 @@
   "title": "03. Kubernetes - Health Management e CPU/Memory Resources",
   "description": "Conceituação e exemplos práticos de health checks e configuração de cpu/memory resources.",
   "difficulty": "Intermediate",
-  "time": "2 hours",
+  "time": "1.5 hours",
   "details": {
     "steps": [
       {
@@ -18,11 +18,11 @@
         "text": "health-management-command-tcp.md"
       },
       {
-        "title": "Testes de health check: Readiness Proble",
+        "title": "Testes de health check: Readiness Probe",
         "text": "app-health-check-readiness.md"
       },
       {
-        "title": "Testes de health check: Liveness Proble",
+        "title": "Testes de health check: Liveness Probe",
         "text": "app-health-check-liveness.md"
       }
     ],

@@ -1,4 +1,4 @@
-O Kubernetes possui um mecanismo de health check ou [probe](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes) o qual é resposável por verificar a saúde dos containers.
+O Kubernetes possui um mecanismo de health check ou [probe](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes), o qual é resposável por verificar a saúde dos containers.
 
 O componente de *kubelet* executa um diagnóstico periódico em containers que possuam as configurações de *probe*.
 
@@ -37,6 +37,8 @@ Para executar uma configuração de probe, o kubelet possui 03 opções:
           initialDelaySeconds: 10 # 9
           periodSeconds: 10 # 10
           timeoutSeconds: 5 # 11
+          successThreshold: 1 # 12
+          failureThreshold: 1 # 13
         livenessProbe:
           httpGet:
             path: /
@@ -58,6 +60,13 @@ Para executar uma configuração de probe, o kubelet possui 03 opções:
 - Dica: Esse valor deve considerar todo o tempo necessário para subir a aplicação dentro do container.
 10. Frequência para re-execução da verificação de readiness probe. Valor padrão: 30s.
 11. Timeout em segundos para resposta do endpoint de health check configurado no item **3**.
+12. Quantidade mínima de tentativas para a verificação ser considerada como *sucesso*.
+- Valor padrão: 1;
+- Valor mínimo: 1;
+- Para *liveness* o valor deve ser igual a 1.
+13. Quantidade mínima de tentativas para a verificação ser considerada como *falha*. 
+- Valor padrão: 3;
+- Valor mínimo: 1.
 
 ## HTTP Liveness Probe
 
@@ -75,6 +84,8 @@ Para executar uma configuração de probe, o kubelet possui 03 opções:
           initialDelaySeconds: 30 # 6
           periodSeconds: 30 # 7
           timeoutSeconds: 1 # 8
+          successThreshold: 1 # 9
+          failureThreshold: 1 # 10
 ```
 
 1. Define a configuração para liveness probe.
@@ -88,3 +99,9 @@ Para executar uma configuração de probe, o kubelet possui 03 opções:
   - Considere também o tempo necessário para execução do *readiness probe*.
 7. Frequência para re-execução da verificação de readiness probe. Valor padrão: 30s.
 8. Timeout em segundos para resposta do endpoint de health check configurado no item **3**.
+9. Quantidade mínima de tentativas para a verificação ser considerada como *sucesso*.
+- Para *liveness* o valor deve ser igual a 1.
+10. Quantidade mínima de tentativas para a verificação ser considerada como *falha*. 
+- Valor padrão: 3;
+- Valor mínimo: 1.
+- Caso a quantidade de mínima de falhas seja atingida, o container será reiniciado e terá a quantidade de *restarts* incrementada em 1.

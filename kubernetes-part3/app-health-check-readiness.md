@@ -10,7 +10,7 @@ O arquivo `resources/health-check.yaml`{{open}} contém 02 aplicações para tes
 ## Verificação de Probe
 
 ### POD frontend
-A POD *frontend* é uma aplicação HTTP que sempre retorna sucesso nas verificações de readiness e liveness.
+A POD *frontend* é uma aplicação HTTP que sempre retorna *sucesso* nas verificações de readiness e liveness.
 
 Para verificar o status, execute: `kubectl get pods --selector="app=frontend" -w`{{execute}}
 
@@ -19,7 +19,7 @@ Para verificar os eventos dessa aplicação, execute: `kubectl get events | grep
 Agora dê um *describe* nessa pod: `POD=$(kubectl get pods --selector="app=frontend" --output=jsonpath={.items..metadata.name}); kubectl describe pod $POD`{{execute}}
 
 ### POD bad-frontend
-A POD *bad-frontend* é uma aplicação HTTP que sempre retorna sucesso nas verificações de readiness e liveness.
+A POD *bad-frontend* é uma aplicação HTTP que sempre retorna *falha* nas verificações de readiness e liveness.
 
 Para verificar o status, execute: `kubectl get pods --selector="app=bad-frontend" -w`{{execute}}
 

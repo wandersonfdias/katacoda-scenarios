@@ -9,6 +9,8 @@ Nesse treinamento daremos uma visão sobre:
 3. Arquitetura básica de um cluster Kubernetes
 4. Demonstração de uso do kubectl
 5. Conceitos
+    - Labels
+    - Annotations
     - Namespace
     - Deployment
     - Service

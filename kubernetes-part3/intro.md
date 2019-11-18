@@ -5,5 +5,8 @@
 Nesse treinamento daremos uma visão sobre:
 
 1. Health Managment
-2. CPU Resources
-3. Memory Resources
+  - Mecanismo de health check
+  - Tipos de configurações
+  - Tipos de ações para verificação
+  - Hands-on executando aplicação com health checks configurados
+  

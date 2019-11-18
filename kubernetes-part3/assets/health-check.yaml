@@ -35,16 +35,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bad-frontend
-  labels:
-    name: bad-frontend
 spec:
   replicas: 1
   selector:
-    name: bad-frontend
+    matchLabels:
+      app: bad-frontend
   template:
     metadata:
       labels:
-        name: bad-frontend
+        app: bad-frontend
     spec:
       containers:
       - name: bad-frontend

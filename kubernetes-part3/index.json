@@ -8,6 +8,14 @@
       {
         "title": "Health Management",
         "text": "health-management.md"
+      },
+      {
+        "title": "Health Management",
+        "text": "health-management.md"
+      },
+      {
+        "title": "Testes de health check",
+        "text": "app-health-management.md"
       }
     ],
     "intro": {
@@ -27,7 +35,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"

@@ -23,6 +23,6 @@ A POD *bad-frontend* é uma aplicação HTTP que sempre retorna *falha* nas veri
 
 Para verificar o status, execute: `kubectl get pods --selector="app=bad-frontend" -w`{{execute}}
 
-Para verificar os eventos dessa aplicação, execute: `kubectl get events | grep "/bad-frontend"`{{execute}}
+Para verificar os eventos dessa aplicação, execute: `kubectl get events -w | grep "/bad-frontend"`{{execute}}
 
 Agora dê um *describe* nessa pod: `POD=$(kubectl get pods --selector="app=bad-frontend" --output=jsonpath={.items..metadata.name}); kubectl describe pod $POD`{{execute}}

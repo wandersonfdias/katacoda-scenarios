@@ -1,4 +1,4 @@
-O Kubernetes possui um mecanismo de health check ou [probe](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes), o qual é resposável por verificar a saúde dos containers.
+O Kubernetes possui um mecanismo de health check ou [probe](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes), o qual é responsável por verificar a saúde dos containers.
 
 O componente de *kubelet* executa um diagnóstico periódico em containers que possuam as configurações de *probe*.
 

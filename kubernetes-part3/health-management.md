@@ -57,16 +57,16 @@ Para executar uma configuração de probe, o kubelet possui 03 opções:
 7. Nome do header que será enviado na requisição HTTP.
 8. Valor do header que será enviado na requisição HTTP.
 9. Tempo inicial para execução da verificação de readiness probe.
-- Dica: Esse valor deve considerar todo o tempo necessário para subir a aplicação dentro do container.
+  - Dica: Esse valor deve considerar todo o tempo necessário para subir a aplicação dentro do container.
 10. Frequência para re-execução da verificação de readiness probe. Valor padrão: 30s.
 11. Timeout em segundos para resposta do endpoint de health check configurado no item **3**.
 12. Quantidade mínima de tentativas para a verificação ser considerada como *sucesso*.
-- Valor padrão: 1;
-- Valor mínimo: 1;
-- Para *liveness* o valor deve ser igual a 1.
+  - Valor padrão: 1;
+  - Valor mínimo: 1;
+  - Para *liveness* o valor deve ser igual a 1.
 13. Quantidade mínima de tentativas para a verificação ser considerada como *falha*. 
-- Valor padrão: 3;
-- Valor mínimo: 1.
+  - Valor padrão: 3;
+  - Valor mínimo: 1.
 
 ## HTTP Liveness Probe
 

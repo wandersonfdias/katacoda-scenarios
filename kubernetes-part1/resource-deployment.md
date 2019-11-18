@@ -48,3 +48,6 @@ spec:
 8. Define o nome do container a ser criado dentro da pod.
 9. Define a imagem utilizada para criação do container dentro da pod.
 10. Define variáveis de ambiente que serão definidas dentro do contexto ou sistema operacional do container.
+
+Abaixo veremos um diagrama explicitando a relação entre *deployment -> replicaset -> pods*:
+![Deployment](/wandersondias/scenarios/kubernetes-part1/assets/deployment-detail.png)

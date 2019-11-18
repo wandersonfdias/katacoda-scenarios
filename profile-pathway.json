@@ -9,6 +9,11 @@
         "title": "02. Kubernetes - Configurações e Armazenamento",
         "description": "Conceituação e exemplos práticos de configmaps, secrets e volumes.",
         "id": "kubernetes-part2"
+      },
+      {
+        "title": "03. Kubernetes - Health Management e CPU/Memory Resources",
+        "description": "Conceituação e exemplos práticos de health checks e configuração de cpu/memory resources.",
+        "id": "kubernetes-part3"
       }
     ],
     "scenarios": []

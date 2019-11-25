@@ -71,7 +71,10 @@ Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas aba
 3. Adicione um novo container à pod (*container 03*), com base no container existente, e defina apenas os limites de memória (sempre respeitando os limites da política).
 4. Crie a pod no namespace *limit-test*.
 
-Faça um describe na pod criada e observe os limites de cpu e memória aplicados aos containers da pod.
+Faça um describe na pod criada e observe os limites de cpu e memória aplicados aos containers da pod. Itens a serem observados:
+- O container **01** foi criado com base nos limites definidos na pod.
+- O container **02** teve valores informados de cpu e herdou os valores padrões para memória.
+- O container **03** teve valores informados de memória e herdou os valores padrões para cpu.
 
 Caso tenha dificuldades, veja o exemplo funcional no arquivo `resources/pod-limit-range-finished.yaml`{{open}}.
 

@@ -19,6 +19,11 @@
         "title": "WIP - 04. Kubernetes - Horizontal Pod Autoscaler",
         "description": "Conceituação e exemplos práticos para 'auto scaling' de pods",
         "id": "kubernetes-part4"
+      },
+      {
+        "title": "WIP - 05. Kubernetes - Estratégias de Deployment",
+        "description": "Conceituação e exemplos práticos de estratégias de deployment",
+        "id": "kubernetes-part5"
       }
     ],
     "scenarios": []

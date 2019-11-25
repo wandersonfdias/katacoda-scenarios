@@ -50,8 +50,10 @@ Agora, verifique se a pod está rodando corretamente: `kubectl -n default get po
 
 Verifique os recursos de memória consumidos por essa pod: `kubectl -n default top pod`{{execute}}.
 
-Caso as métricas dessa pod ainda não estejam disponíveis, a seguinte mensagem de erro será retornada: 
+Caso as métricas dessa pod ainda não estejam disponíveis, as seguintes mensagens de erro podem ser retornadas:
 > `Error from server (NotFound): podmetrics.metrics.k8s.io "default/memory-demo" not found`
+ou
+> `error: metrics not available yet`
 
 Após os recursos de memória serem retornados para essa pod, verfique o consumo de memória do node: `kubectl -n default top node`{{execute}}.
 

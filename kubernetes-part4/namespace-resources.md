@@ -65,15 +65,15 @@ Faça um describe na política de limite criada: `kubectl -n limit-test describe
 
 ### Exercício 1: Criando container que respeite os limites do namespace
 
-Abra o arquivo `resources/pod-limite-range.yaml`{{open}} e execute as tarefas abaixo:
+Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
 1. Edite o container 01 e defina limites mínimo e máximo de cpu/memória que respeitem os limites criados na política.
-2. Duplique o container 01, gerando o container 02, e defina apenas os limites de cpu (sempre respeitando os limites da política).
-3. Duplique o container 01, gerando o container 03, e defina apenas os limites de memória (sempre respeitando os limites da política).
+2. Adicione um novo container à pod (*container 02*), com base no container existente, e defina apenas os limites de cpu (sempre respeitando os limites da política).
+3. Adicione um novo container à pod (*container 03*), com base no container existente, e defina apenas os limites de memória (sempre respeitando os limites da política).
 4. Crie a pod no namespace *limit-test*.
 
 Faça um describe na pod criada e observe os limites de cpu e memória aplicados aos containers da pod.
 
-Caso tenha dificuldades, veja o exemplo funcional no arquivo `resources/pod-limite-range-finished.yaml`{{open}}.
+Caso tenha dificuldades, veja o exemplo funcional no arquivo `resources/pod-limit-range-finished.yaml`{{open}}.
 
 A saída deve ser algo semelhante a:
 ```

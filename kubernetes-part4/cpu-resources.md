@@ -2,6 +2,7 @@ Recursos de CPU são definidos para os containers das PODs.
 
 É possível definir limites mínimo e máximo para consumo de CPU.
 - CPU Request: Define o limite mínimo de CPU para funcionamento de um container. Permite valores decimais.
+  - 0.5 equivale a 500m (milicpu)
 - CPU Limit: Define o limite máximo de CPU que um container pode consumir. Permite valores decimais.
 
 **Dica**: Não defina apenas o CPU Limit. Se isso ocorrer, o kubernetes associará o valor de CPU Limit ao valor de CPU Request. Definir valor igual a zero é permitido também.
@@ -34,9 +35,9 @@ spec:
 
 1. Define configuração de recursos para o container.
 2. Define configuração de limite máximo de algum recurso (cpu ou memória) para um container.
-3. Define o limite máximo de cpu que será utilizado pelo container.
+3. Define o limite máximo de cpu que será utilizado pelo container, que no exemplo será de 01 cpu.
 4. Define configuração de limite mínimo de algum recurso (cpu ou memória) para um container.
-5. Define o limite mínimo de cpu que será utilizado pelo container.
+5. Define o limite mínimo de cpu que será utilizado pelo container, que no exemplo será de 500 milicpu.
 
 ## Testando limite de CPU
 

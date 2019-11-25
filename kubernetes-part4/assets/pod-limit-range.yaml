@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-limit-range
+spec:
+  containers:
+  - name: container-limit-range-1
+    image: busybox
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do echo hello from container 01; sleep 10; done"]
+

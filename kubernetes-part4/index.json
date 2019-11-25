@@ -18,8 +18,20 @@
         "text": "memory-resources.md"
       },      
       {
+        "title": "Namespace Default Resources - CPU and Memory",
+        "text": "namespace-resources.md"
+      },
+      {
+        "title": "Namespace Quotas - CPU and Memory",
+        "text": "namespace-quotas.md"
+      },      
+      {
         "title": "POD Auto Scaling",
         "text": "hpa.md"
+      },      
+      {
+        "title": "Exercises",
+        "text": "exercises.md"
       }
     ],
     "intro": {

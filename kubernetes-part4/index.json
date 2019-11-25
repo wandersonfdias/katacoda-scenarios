@@ -12,23 +12,11 @@
       {
         "title": "CPU Resources",
         "text": "cpu-resources.md"
-      },
-      {
-        "title": "CPU Resources",
-        "text": "cpu-resources.md"
-      },
+      },      
       {
         "title": "Memory Resources",
         "text": "memory-resources.md"
-      },
-      {
-        "title": "Memory Resources",
-        "text": "memory-resources.md"
-      },
-      {
-        "title": "POD Auto Scaling",
-        "text": "hpa.md"
-      },
+      },      
       {
         "title": "POD Auto Scaling",
         "text": "hpa.md"

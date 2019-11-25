@@ -22,7 +22,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: memory-demo
-  namespace: mem-example
 spec:
   containers:
   - name: memory-demo-ctr
@@ -77,7 +76,15 @@ Faça um describe na pod e observe os eventos da mesma: `kubectl -n default desc
 
 A seguinte mensagem deve aparecer na seção *Events*:
 ```
-xxx
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  17s                default-scheduler  Successfully assigned default/memory-demo to node01
+  Normal   Pulling    15s (x2 over 17s)  kubelet, node01    Pulling image "polinux/stress"
+  Normal   Pulled     13s (x2 over 15s)  kubelet, node01    Successfully pulled image "polinux/stress"
+  Normal   Created    13s (x2 over 15s)  kubelet, node01    Created container memory-demo-ctr
+  Normal   Started    13s (x2 over 15s)  kubelet, node01    Started container memory-demo-ctr
+  Warning  BackOff    12s (x2 over 13s)  kubelet, node01    Back-off restarting failed container
 ```
 
 Remova a pod criada: `kubectl -n default delete pod memory-demo`{{execute}}.

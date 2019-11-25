@@ -4,6 +4,10 @@ Recursos de CPU são definidos para os containers das PODs.
 - CPU Request: Define o limite mínimo de CPU para funcionamento de um container. Permite valores decimais.
 - CPU Limit: Define o limite máximo de CPU que um container pode consumir. Permite valores decimais.
 
+**Dica**: Não defina apenas o CPU Limit. Se isso ocorrer, o kubernetes associará o valor de CPU Limit ao valor de CPU Request. Definir valor igual a zero é permitido também.
+
+**ATENÇÃO:** Se os limites de CPU não forem definidos, o container poderá consumir todo o recurso de CPU de um node.
+
 Recursos de CPU são medidos em [unidades de CPU](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/#cpu-units). Uma (01) CPU no kubernetes é equivalente a:
 - 01 AWS vCPU
 - 01 GCP Core
@@ -21,11 +25,11 @@ spec:
   containers:
   - name: cpu-demo-ctr
     image: vish/stress
-    resources: # 1
-      limits: # 2
-        cpu: "1" # 3
-      requests: # 4
-        cpu: "0.5" # 5
+    resources:      # 1
+      limits:       # 2
+        cpu: "1"    # 3
+      requests:     # 4
+        cpu: "0.5"  # 5
 ```
 
 1. Define configuração de recursos para o container.

@@ -5,7 +5,7 @@ Por padrão, o metrics-server realiza a coleta de métricas nos nodes a cada 60s
 
 Para instalar esse componente, utilizaremos um [template do helm](https://github.com/helm/charts/tree/master/stable/metrics-server). Vide linha abaixo:
 
-`helm install stable/metrics-server \ 
+`helm install stable/metrics-server \
 --name metrics-server \
 --namespace kube-system \
 --set args[0]="--kubelet-preferred-address-types=InternalIP" \
@@ -20,11 +20,11 @@ A linha acima define os seguintes parâmetros de instalação:
 - *--set args[1]="--kubelet-insecure-tls*: Habilita o modo inseguro, ou seja, nenhum certificado será verificado. Esse parâmetro não pode ser utilizado em ambientes produtivos.
 - *--set args[2]="--metric-resolution=30s"*: Define que o metrics server coletará métricas nos nodes a cada 30s.
 
-Para verificar se a POD está running: `kubectl -n kube-system get pod | grep metric`{{execute}}
+Para verificar se a POD está running: `kubectl -n kube-system get pod -w | grep metric`{{execute}}
 
 Para verificar se a instalação ocorreu com sucesso, execute: `kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"`{{execute}}
-*Dica*: Geralmente demora uns 60s para instalação.
-Caso o metrics-server ainda não esteja disponível, aparecerá uma mensagem: 
+
+Geralmente demora uns 60s para instalação. Caso o metrics-server ainda não esteja disponível, aparecerá uma mensagem:
 > `Error from server (ServiceUnavailable): the server is currently unable to handle the request`
 
 Uma vez que o mesmo estiver disponível, um conteúdo em JSON será retornado.
@@ -36,6 +36,6 @@ pu":"69096956n","memory":"885732Ki"}}]}`
 
 Para verificar os recursos consumidos para cada node, execute: `kubectl top node`{{execute}}
 
-Para verificar os recursos consumidos para cada node, execute: `kubectl top pod --all-namespaces`{{execute}}
+Para verificar os recursos consumidos por pods, execute: `kubectl top pod --all-namespaces`{{execute}}
 
 As informações de métricas também são disponibilizadas no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/), dentro do detalhe de cada recurso (pods etc).

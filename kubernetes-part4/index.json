@@ -1,0 +1,59 @@
+{
+  "title": "04. Kubernetes - Horizontal Pod Autoscaler",
+  "description": "Conceituação e exemplos práticos para 'auto scaling' de pods",
+  "difficulty": "Intermediate",
+  "time": "1 hour",
+  "details": {
+    "steps": [
+      {
+        "title": "Metrics Server",
+        "text": "metrics-server.md"
+      },
+      {
+        "title": "CPU Resources",
+        "text": "cpu-resources.md"
+      },
+      {
+        "title": "CPU Resources",
+        "text": "cpu-resources.md"
+      },
+      {
+        "title": "Memory Resources",
+        "text": "memory-resources.md"
+      },
+      {
+        "title": "Memory Resources",
+        "text": "memory-resources.md"
+      },
+      {
+        "title": "POD Auto Scaling",
+        "text": "hpa.md"
+      },
+      {
+        "title": "POD Auto Scaling",
+        "text": "hpa.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "start-course.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*.yaml",
+          "target": "/root/resources"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

@@ -14,6 +14,11 @@
         "title": "03. Kubernetes - Health Management",
         "description": "Conceituação e exemplos práticos de health checks.",
         "id": "kubernetes-part3"
+      },
+      {
+        "title": "WIP - 04. Kubernetes - Horizontal Pod Autoscaler",
+        "description": "Conceituação e exemplos práticos para 'auto scaling' de pods",
+        "id": "kubernetes-part4"
       }
     ],
     "scenarios": []

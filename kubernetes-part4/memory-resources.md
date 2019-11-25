@@ -88,3 +88,27 @@ Events:
 ```
 
 Remova a pod criada: `kubectl -n default delete pod memory-demo`{{execute}}.
+
+## Testando cenário de recursos de memória insuficientes no node para execução do container
+
+Abra o arquivo `resources/memory-demo.yaml`{{open}} e defina os seguintes limites de memória:
+  - request: 10i
+  - limit: 10Gi
+
+Crie a pod no namespace default: `kubectl apply -f resources/memory-demo.yaml`{{execute}}.
+
+Como o worker-node disponível não possui o limite de memória solicitado, o kubernetes não conseguirá executar essa POD, deixando a mesma num estado *Pending*.
+
+Verifique o estado da pod: `kubectl -n default get pod memory-demo -w`{{execute}}.
+
+Faça um describe na pod e observe os eventos da mesma: `kubectl -n default describe pod memory-demo`{{execute}}.
+
+A seguinte mensagem deve aparecer na seção *Events*:
+```
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  11s   default-scheduler  0/2 nodes are available: 2 Insufficient memory.
+```
+
+Remova a pod criada: `kubectl -n default delete pod memory-demo`{{execute}}.

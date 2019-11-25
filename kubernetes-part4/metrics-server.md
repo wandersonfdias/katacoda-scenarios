@@ -38,4 +38,4 @@ Para verificar os recursos consumidos para cada node, execute: `kubectl top node
 
 Para verificar os recursos consumidos por pods, execute: `kubectl top pod --all-namespaces`{{execute}}
 
-As informações de métricas também são disponibilizadas no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/), dentro do detalhe de cada recurso (pods etc).
+As informações de métricas também são disponibilizadas no [dashboard do kubernetes](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Observem as informações dos nodes.

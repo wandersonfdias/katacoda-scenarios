@@ -43,7 +43,12 @@ Crie a pod no namespace default: `kubectl apply -f resources/cpu-demo.yaml`{{exe
 
 Agora, verifique se a pod está rodando corretamente: `kubectl -n default get pod cpu-demo -w`{{execute}}.
 
-Verifique os recursos de CPU consumidos por essa pod: `kubectl -n default top pod cpu-demo`{{execute}}.
+Verifique os recursos de CPU consumidos por essa pod: `kubectl -n default top pod`{{execute}}.
+
+Caso as métricas dessa pod ainda não estejam disponíveis, a seguinte mensagem de erro será retornada: 
+> `Error from server (NotFound): podmetrics.metrics.k8s.io "default/cpu-demo" not found`
+
+Após os recursos de cpu serem retornados para essa pod, verfique o consumo de cpu do node: `kubectl -n default top node`{{execute}}.
 
 Remova a pod criada: `kubectl -n default delete pod cpu-demo`{{execute}}.
 
@@ -60,5 +65,13 @@ Crie a pod no namespace default: `kubectl apply -f resources/cpu-demo.yaml`{{exe
 Verifique o estado da pod: `kubectl -n default get pod cpu-demo -w`{{execute}}.
 
 Faça um describe na pod e observe os eventos da mesma: `kubectl -n default describe pod cpu-demo`{{execute}}.
+
+A seguinte mensagem deve aparecer na seção *Events*:
+```
+Events:  
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  12s   default-scheduler  0/2 nodes are available: 2 Insufficient cpu.
+```
 
 Remova a pod criada: `kubectl -n default delete pod cpu-demo`{{execute}}.

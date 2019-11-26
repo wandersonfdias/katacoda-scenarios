@@ -90,7 +90,7 @@ requests.memory  300Mi 500Mi
 
 Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
 1. Altere o nome da pod para *pod-limit-range-02*.
-2. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
+2. Crie a pod no namespace *quota-test*. A saída do erro deve ser semelhante a:
 ```
 Error from server (Forbidden): error when creating "resources/pod-limit-range.yaml": pods "pod-limit-range-02" is forbidden: exceeded quot
 a: quota-mem-cpu, requested: limits.cpu=900m,limits.memory=900Mi,requests.cpu=600m,requests.memory=300Mi, used: limits.cpu=900m,limits.mem

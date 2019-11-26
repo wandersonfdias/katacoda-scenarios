@@ -16,7 +16,7 @@ O mesmo possui as seguintes características:
 
 Comando: `kubectl autoscale <kind> <resource-name> --cpu-percent=50 --min=1 --max=10`
 - kind: tipo do objeto que terá autoscaling (ex: deployment);
-- resouce-name: nome do objeto que terá autoscalingl;
+- resouce-name: nome do objeto que terá autoscaling;
 - cpu-percent: % médio de consumo para disparar o mecanismo de autoscaling;
 - min: quantidade mínima de réplicas da pod após o downscale;
 - max: quantidade máxima de réplicas da pod após o upscale.

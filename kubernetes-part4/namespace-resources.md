@@ -76,7 +76,7 @@ Container   cpu       100m   400m   110m             300m           -
 ### Exercício 1: Criando container que respeite os limites do namespace
 
 Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
-1. Edite o container 01 e defina limites mínimo e máximo de cpu/memória que respeitem os limites criados na política.
+1. Altere o container 01 e defina limites mínimo e máximo de cpu/memória que respeitem os limites criados na política.
 2. Adicione um novo container à pod (*container 02*), com base no container existente, e defina apenas os limites de cpu (sempre respeitando os limites da política).
 3. Adicione um novo container à pod (*container 03*), com base no container existente, e defina apenas os limites de memória (sempre respeitando os limites da política).
 4. Crie a pod no namespace *limit-test*.
@@ -93,13 +93,13 @@ Caso tenha dificuldades, veja o exemplo funcional no arquivo `resources/pod-limi
 
 Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
 1. Apague os containers 02 e 03.
-2. Edite os limites máximos de cpu e memória do container 01, de maneira que sejam superiores aos limites definidos no namespace. 
+2. Altere os limites máximos de cpu e memória do container 01, de maneira que sejam superiores aos limites definidos no namespace. 
 3. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
 ```
 Error from server (Forbidden): error when creating "resources/pod-limit-range.yaml": pods "pod-limit-range" is forbidden: [maximum cpu usage per
  Container is 400m, but limit is 600m., maximum memory usage per Container is 500Mi, but limit is 600Mi.]
 ```
-4. Edite os limites mínimos de cpu e memória do container 01, de maneira que sejam inferiores aos limites definidos no namespace. 
+4. Altere os limites mínimos de cpu e memória do container 01, de maneira que sejam inferiores aos limites definidos no namespace. 
 5. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
 ```
 Error from server (Forbidden): error when creating "resources/pod-limit-range.yaml": pods "pod-limit-range" is forbidden: [minimum cpu usage per

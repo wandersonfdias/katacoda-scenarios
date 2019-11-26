@@ -23,7 +23,7 @@ Comando: `kubectl autoscale <kind> <resource-name> --cpu-percent=50 --min=1 --ma
 
 ex: `kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10`
 
-## Forma declarativa de autoscaling
+## Forma declarativa de autoscaling de cpu
 
 ```yaml
 apiVersion: autoscaling/v1
@@ -47,7 +47,7 @@ spec:
 5. Define o objeto do cluster que terá a política de autoscaling configurada;
 6. Quantidade mínima de réplicas da pod após o downscale;
 7. Quantidade máxima de réplicas da pod após o upscale;
-8. % médio de consumo para disparar o mecanismo de autoscaling. Nesse exemplo, 50% de consumo de cpu considerando todas pods.
+8. % médio de consumo para disparar o mecanismo de autoscaling. Nesse exemplo, 50% de consumo de cpu considerando todas as pods.
 
 ## Testando o autoscaling por consumo de cpu
 
@@ -73,12 +73,18 @@ Até o momento, temos apenas uma réplica criada e a política de autoscaling de
 Agora iremos realizar um teste de carga nessa aplicação para forçar o upscale da mesma.
 
 Na aba terminal, clique no botão **+** e depois na opção *Open New Terminal*.
-Dentro do terminal **2**, execute um loop de chamadas HTTP à aplicação: `while true; do wget -q -O- http://hpa-example.default.svc.cluster.local; done`{{execute}}.
+
+Dentro do terminal **2**, crie uma nova aplicação para teste: `kubectl -n hpa-test run --generator=run-pod/v1 -it --rm load-generator --image=busybox /bin/sh`{{execute}}.
+
+Após isso, faremos um loop de chamadas HTTP à aplicação *hpa-example*: `while true; do wget -q -O- http://hpa-example.hpa-test.svc.cluster.local; done`{{execute}}.
 
 Agora volte ao terminal **1** e verifique a quantidade de réplicas da aplicação: `kubectl -n hpa-test get deployment -w`{{execute}}.
 Quando o total de réplicas atingir o valor igual a *6*, significa que o *upscale* atingiu seu limite máximo.
 
-Volte ao terminal **2** e pressione *CTRL + C*.
+Volte ao terminal **2**, pressione *CTRL + C* e feche o mesmo. 
 Agora volte ao terminal **1** e verifique a quantidade de réplicas da aplicação: `kubectl -n hpa-test get deployment -w`{{execute}}.
+
 Quando o total de réplicas atingir o valor igual a *1*, significa que o *downscale* atingiu seu limite mínimo.
 Esse processo deve demorar até 5 minutos.
+
+Como ação final, remova o namespace criado: `kubectl delete ns hpa-test`{{execute}}.

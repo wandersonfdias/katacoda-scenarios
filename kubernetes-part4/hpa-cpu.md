@@ -84,7 +84,8 @@ Caso o total de réplicas atinja ao menos *4*, prossiga para o próximo passo.
 
 Verifique o status do resource de HPA: `kubectl -n hpa-test get hpa`{{execute}}.
 
-Verifique os eventos do namespace: `kubectl -n hpa-test get event`{{execute}}. Observe as linhas de autoscale. Devem ser semelhantes às linhas abaixo:
+Verifique os eventos do namespace: `kubectl -n hpa-test get event`{{execute}}. Observe as linhas de *autoscale*. Devem ser semelhantes às linhas abaixo:
+
 ```
 6m47s       Normal    SuccessfulRescale              horizontalpodautoscaler/hpa-example   New size: 4; reason: cpu resource utilization (percentage of request) above target
 6m47s       Normal    ScalingReplicaSet              deployment/hpa-example                Scaled up replica set hpa-example-54bb7cdbf to 4
@@ -94,6 +95,19 @@ Volte ao terminal **2**, pressione *CTRL + C* e feche o mesmo.
 Agora volte ao terminal **1** e verifique a quantidade de réplicas da aplicação: `kubectl -n hpa-test get deployment -w`{{execute}}.
 
 Quando o total de réplicas atingir o valor igual a *1*, significa que o *downscale* atingiu seu limite mínimo.
-Esse processo deve demorar até 5 minutos.
+Esse processo demorará ao menos 5 minutos.
+
+Verifique o status do resource de HPA: `kubectl -n hpa-test get hpa`{{execute}}.
+
+Verifique os eventos do namespace: `kubectl -n hpa-test get event`{{execute}}. Observe as linhas de *downscale*. Devem ser semelhantes às linhas abaixo:
+
+```
+12s         Normal    SuccessfulDelete               replicaset/hpa-example-54bb7cdbf      Deleted pod: hpa-example-54bb7cdbf-xwc82
+12s         Normal    SuccessfulDelete               replicaset/hpa-example-54bb7cdbf      Deleted pod: hpa-example-54bb7cdbf-hlrnq
+12s         Normal    SuccessfulDelete               replicaset/hpa-example-54bb7cdbf      Deleted pod: hpa-example-54bb7cdbf-df5rz
+12s         Normal    SuccessfulDelete               replicaset/hpa-example-54bb7cdbf      Deleted pod: hpa-example-54bb7cdbf-xnss7
+73s         Normal    SuccessfulRescale              horizontalpodautoscaler/hpa-example   New size: 1; reason: All metrics below target
+73s         Normal    ScalingReplicaSet              deployment/hpa-example                Scaled down replica set hpa-example-54bb7cdbf to 1
+```
 
 Como ação final, remova o namespace criado: `kubectl delete ns hpa-test`{{execute}}.

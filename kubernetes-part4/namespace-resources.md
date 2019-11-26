@@ -61,7 +61,16 @@ O arquivo `resources/limit-range.yaml`{{open}} contém a definição de recursos
 
 Aplique a política de limite ao namespace criado: `kubectl -n limit-test apply -f resources/limit-range.yaml`{{execute}}.
 
-Faça um describe na política de limite criada: `kubectl -n limit-test describe limit-range-container`{{execute}}.
+Faça um describe na política de limite criada: `kubectl -n limit-test describe limitrange limit-range-container`{{execute}}.
+Teremos uma saída semelhante a: 
+
+```
+Type        Resource  Min    Max    Default Request  Default Limit  Max Limit/Request Ratio
+----        --------  ---    ---    ---------------  -------------  -----------------------
+Container   memory    100Mi  500Mi  110Mi            400Mi          -
+Container   cpu       100m   400m   110m             300m           -
+```
+
 
 ### Exercício 1: Criando container que respeite os limites do namespace
 
@@ -78,10 +87,6 @@ Faça um describe na pod criada e observe os limites de cpu e memória aplicados
 
 Caso tenha dificuldades, veja o exemplo funcional no arquivo `resources/pod-limit-range-finished.yaml`{{open}}.
 
-A saída deve ser algo semelhante a:
-```
-xxx
-```
 
 ### Exercício 2: Criando container que exceda os limites do namespace
 

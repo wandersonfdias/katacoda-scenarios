@@ -36,7 +36,7 @@ Faça uma cópia do arquivo `resources/app-hpa-cpu.yaml` para `resources/app-hpa
 
 Altere o novo arquivo `resources/app-hpa-memory.yaml`{{open}}, substituindo os limites de cpu por limites de memória, conforme abaixo:
 - limits.memory: 50Mi
-- requests.memory: 13Mi
+- requests.memory: 12Mi
 
 Crie a aplicação no namespace *hpa-test*: `kubectl -n hpa-test create -f resources/app-hpa-memory.yaml`{{execute}}.
 

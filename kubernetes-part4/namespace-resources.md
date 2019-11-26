@@ -53,6 +53,7 @@ spec:
 15. Define limite mínimo padrão de cpu para containers do namespace.
 16. Define limite mínimo padrão de memória para containers do namespace.
 
+
 ## Testando limites para um namespace
 
 Crie um novo namespace: `kubectl create ns limit-test`{{execute}}.
@@ -62,14 +63,14 @@ O arquivo `resources/limit-range.yaml`{{open}} contém a definição de recursos
 Aplique a política de limite ao namespace criado: `kubectl -n limit-test apply -f resources/limit-range.yaml`{{execute}}.
 
 Faça um describe na política de limite criada: `kubectl -n limit-test describe limitrange limit-range-container`{{execute}}.
-Teremos uma saída semelhante a: 
+Teremos uma saída semelhante a:
 
 ```
 Type        Resource  Min    Max    Default Request  Default Limit  Max Limit/Request Ratio
 ----        --------  ---    ---    ---------------  -------------  -----------------------
 Container   memory    100Mi  500Mi  110Mi            400Mi          -
 Container   cpu       100m   400m   110m             300m           -
-```
+```
 
 
 ### Exercício 1: Criando container que respeite os limites do namespace

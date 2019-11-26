@@ -32,6 +32,10 @@
       {
         "title": "POD Autoscaling by Memory",
         "text": "hpa-memory.md"
+      },
+      {
+        "title": "POD Autoscaling Challenge",
+        "text": "exercises.md"
       }
     ],
     "intro": {

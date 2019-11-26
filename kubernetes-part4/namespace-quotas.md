@@ -67,7 +67,6 @@ requests.cpu     0     1
 requests.memory  0     500Mi
 ```
 
-
 ### Exercício 1: Criando container para consumir parte da cota de recursos
 
 Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
@@ -75,14 +74,15 @@ Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas aba
 2. Crie a pod no namespace *quota-test*.
 3. Verifique o consumo da cota do namespace *quota-test*. Deve ter uma saída semelhante :
 ```
-Resource         Used  Hard
---------         ----  ----
-limits.cpu       900m  1500m
-limits.memory    900Mi 1500Mi
-requests.cpu     600m  1
-requests.memory  300Mi 500Mi
+Name:            quota-mem-cpu
+Namespace:       quota-test
+Resource         Used   Hard
+--------         ----   ----
+limits.cpu       900m   1500m
+limits.memory    900Mi  1500Mi
+requests.cpu     600m   1
+requests.memory  300Mi  500Mi
 ```
-
 
 ### Exercício 2: Adicionando container para exceder a cota criada para o namespace
 
@@ -90,7 +90,8 @@ Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas aba
 1. Altere o nome da pod para *pod-limit-range-02*.
 2. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
 ```
-xxx
-sdfsdfsdfsdf
+Error from server (Forbidden): error when creating "resources/pod-limit-range.yaml": pods "pod-limit-range-02" is forbidden: exceeded quot
+a: quota-mem-cpu, requested: limits.cpu=900m,limits.memory=900Mi,requests.cpu=600m,requests.memory=300Mi, used: limits.cpu=900m,limits.mem
+ory=900Mi,requests.cpu=600m,requests.memory=300Mi, limited: limits.cpu=1500m,limits.memory=1500Mi,requests.cpu=1,requests.memory=500Mi
 ```
 3. Remova o namespace criado: `kubectl delete ns quota-test`{{execute}}.

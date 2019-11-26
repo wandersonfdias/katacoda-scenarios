@@ -66,7 +66,7 @@ Teremos uma saída semelhante a:
 
 ```
 NAME         REFERENCE                      TARGET           MINPODS   MAXPODS   REPLICAS   AGE
-hpa-example  Deployment/hpa-example/scale   <unknown> / 50%  1         6         1          10s
+hpa-example  Deployment/hpa-example/scale   <unknown> / 50%  1         6         1          20s
 ```
 
 Até o momento, temos apenas uma réplica criada e a política de autoscaling de cpu aplicada à aplicação.
@@ -80,6 +80,15 @@ Após isso, faremos um loop de chamadas HTTP à aplicação *hpa-example*: `whil
 
 Agora volte ao terminal **1** e verifique a quantidade de réplicas da aplicação: `kubectl -n hpa-test get deployment -w`{{execute}}.
 Quando o total de réplicas atingir o valor igual a *6*, significa que o *upscale* atingiu seu limite máximo.
+Caso o total de réplicas atinga o valor mínimo de *4*, prossiga para o próximo passo.
+
+Verifique o status do resource de HPA: `kubectl -n hpa-test get hpa`{{execute}}.
+
+Verifique os eventos do namespace: `kubectl -n hpa-test get event`{{execute}}. Observe as linhas de autoscale. Devem ser semelhantes às linhas abaixo:
+```
+6m47s       Normal    SuccessfulRescale              horizontalpodautoscaler/hpa-example   New size: 4; reason: cpu resource utilization (percentage of request) above target
+6m47s       Normal    ScalingReplicaSet              deployment/hpa-example                Scaled up replica set hpa-example-54bb7cdbf to 4
+```
 
 Volte ao terminal **2**, pressione *CTRL + C* e feche o mesmo. 
 Agora volte ao terminal **1** e verifique a quantidade de réplicas da aplicação: `kubectl -n hpa-test get deployment -w`{{execute}}.

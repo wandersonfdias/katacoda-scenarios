@@ -2,7 +2,7 @@
   "title": "04. Kubernetes - Compute Resources / Horizontal Pod Autoscaler",
   "description": "Conceituação e exemplos práticos de recursos de cpu e memória e 'auto scaling' de pods",
   "difficulty": "Intermediate",
-  "time": "1.5 hours",
+  "time": "3 hours",
   "details": {
     "steps": [
       {

@@ -80,7 +80,7 @@ Após isso, faremos um loop de chamadas HTTP à aplicação *hpa-example*: `whil
 
 Agora volte ao terminal **1** e verifique a quantidade de réplicas da aplicação: `kubectl -n hpa-test get deployment -w`{{execute}}.
 Quando o total de réplicas atingir o valor igual a *6*, significa que o *upscale* atingiu seu limite máximo.
-Caso o total de réplicas atinga o valor mínimo de *4*, prossiga para o próximo passo.
+Caso o total de réplicas atinja ao menos *4*, prossiga para o próximo passo.
 
 Verifique o status do resource de HPA: `kubectl -n hpa-test get hpa`{{execute}}.
 

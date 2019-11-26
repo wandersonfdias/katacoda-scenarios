@@ -26,12 +26,12 @@
         "text": "namespace-quotas.md"
       },      
       {
-        "title": "POD Auto Scaling",
+        "title": "Autoscaling POD by CPU",
         "text": "hpa.md"
       },      
       {
-        "title": "Exercises",
-        "text": "exercises.md"
+        "title": "Autoscaling POD by Memory",
+        "text": "hpa.md"
       }
     ],
     "intro": {

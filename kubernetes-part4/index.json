@@ -1,8 +1,8 @@
 {
-  "title": "04. Kubernetes - Horizontal Pod Autoscaler",
-  "description": "Conceituação e exemplos práticos para 'auto scaling' de pods",
+  "title": "04. Kubernetes - Compute Resources / Horizontal Pod Autoscaler",
+  "description": "Conceituação e exemplos práticos de recursos de cpu e memória e 'auto scaling' de pods",
   "difficulty": "Intermediate",
-  "time": "1 hour",
+  "time": "1.5 hours",
   "details": {
     "steps": [
       {
@@ -18,7 +18,7 @@
         "text": "memory-resources.md"
       },      
       {
-        "title": "Namespace Default Resources - CPU and Memory",
+        "title": "Nampespace Limit Range Resources - CPU and Memory",
         "text": "namespace-resources.md"
       },
       {

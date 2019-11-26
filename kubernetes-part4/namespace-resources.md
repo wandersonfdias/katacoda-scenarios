@@ -1,4 +1,4 @@
-É possível configurar limites de CPU e memória para containers executados num namespace.
+É possível configurar limites de CPU, memória ou disco para containers executados num namespace.
 Essa configuração é denominada [Limit Range](https://kubernetes.io/docs/concepts/policy/limit-range/).
 
 Características: 

@@ -28,3 +28,8 @@ spec:
       containers:
       - name: hpa-example
         image: k8s.gcr.io/hpa-example
+        resources:
+          limits:
+            cpu: "300m"
+          requests:
+            cpu: "150m"

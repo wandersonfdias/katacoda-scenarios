@@ -65,8 +65,8 @@ Verifique se o novo resource de HPA foi criado corretamente: `kubectl -n hpa-tes
 Teremos uma saída semelhante a:
 
 ```
-NAME         REFERENCE                      TARGET    MINPODS   MAXPODS   REPLICAS   AGE
-hpa-example  Deployment/hpa-example/scale   0% / 50%  1         6         1          10s
+NAME         REFERENCE                      TARGET           MINPODS   MAXPODS   REPLICAS   AGE
+hpa-example  Deployment/hpa-example/scale   <unknown> / 50%  1         6         1          10s
 ```
 
 Até o momento, temos apenas uma réplica criada e a política de autoscaling de cpu aplicada à aplicação.

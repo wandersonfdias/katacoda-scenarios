@@ -31,7 +31,7 @@
       },      
       {
         "title": "Autoscaling POD by Memory",
-        "text": "hpa-cpu.md"
+        "text": "hpa-memory.md"
       }
     ],
     "intro": {

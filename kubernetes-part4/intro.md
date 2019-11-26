@@ -9,4 +9,5 @@ Nesse treinamento daremos uma visão sobre:
 3. POD Memory Resource
 4. Nampespace Limit Range Resources - CPU and Memory
 5. Namespace Quotas - CPU and Memory
-6. POD Auto Scaling
+6. POD Auto Scaling by CPU
+7. POD Auto Scaling by Memory

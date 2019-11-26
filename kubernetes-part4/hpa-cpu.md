@@ -19,7 +19,7 @@ Comando: `kubectl autoscale <kind> <resource-name> --cpu-percent=50 --min=1 --ma
 - resouce-name: nome do objeto que terá autoscalingl;
 - cpu-percent: % médio de consumo para disparar o mecanismo de autoscaling;
 - min: quantidade mínima de réplicas da pod após o downscale;
-- max: quantidade máxima de réplicas da pod após o upscale;
+- max: quantidade máxima de réplicas da pod após o upscale.
 
 ex: `kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10`
 
@@ -42,11 +42,11 @@ spec:
 
 1. Define o tipo do resource para o k8s, que nesse cenário é *HorizontalPodAutoscaler*.
 2. Define o nome do objeto que será aplicado ao namespace.
-3. Define configurações para aplicação do autoscaler;
-4. Define o tipo do objeto do cluster que terá a política de autoscaling configurada;
-5. Define o objeto do cluster que terá a política de autoscaling configurada;
-6. Quantidade mínima de réplicas da pod após o downscale;
-7. Quantidade máxima de réplicas da pod após o upscale;
+3. Define configurações para aplicação do autoscaler.
+4. Define o tipo do objeto do cluster que terá a política de autoscaling configurada.
+5. Define o objeto do cluster que terá a política de autoscaling configurada.
+6. Quantidade mínima de réplicas da pod após o downscale.
+7. Quantidade máxima de réplicas da pod após o upscale.
 8. % médio de consumo para disparar o mecanismo de autoscaling. Nesse exemplo, 50% de consumo de cpu considerando todas as pods.
 
 ## Testando o autoscaling por consumo de cpu

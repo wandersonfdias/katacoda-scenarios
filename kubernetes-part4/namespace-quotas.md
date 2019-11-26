@@ -91,5 +91,6 @@ Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas aba
 2. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
 ```
 xxx
+sdfsdfsdfsdf
 ```
 3. Remova o namespace criado: `kubectl delete ns quota-test`{{execute}}.

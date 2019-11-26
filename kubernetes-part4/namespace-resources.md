@@ -90,6 +90,18 @@ Caso tenha dificuldades, veja o exemplo funcional no arquivo `resources/pod-limi
 
 ### Exercício 2: Criando container que exceda os limites do namespace
 
-
-
-Remova o namespace criado: `kubectl delete ns limit-test`{{execute}}.
+Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
+1. Apague os containers 02 e 03.
+2. Edite os limites máximos de cpu e memória do container 01, de maneira que sejam superiores aos limites definidos no namespace. 
+3. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
+```
+Error from server (Forbidden): error when creating "resources/pod-limit-range.yaml": pods "pod-limit-range" is forbidden: [maximum cpu usage per
+ Container is 400m, but limit is 600m., maximum memory usage per Container is 500Mi, but limit is 600Mi.]
+```
+4. Edite os limites mínimos de cpu e memória do container 01, de maneira que sejam inferiores aos limites definidos no namespace. 
+5. Crie a pod no namespace *limit-test*. A saída do erro deve ser semelhante a:
+```
+Error from server (Forbidden): error when creating "resources/pod-limit-range.yaml": pods "pod-limit-range" is forbidden: [minimum cpu usage per
+ Container is 100m, but request is 90m., minimum memory usage per Container is 100Mi, but request is 90Mi.]
+```
+6. Remova o namespace criado: `kubectl delete ns limit-test`{{execute}}.

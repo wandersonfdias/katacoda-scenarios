@@ -72,7 +72,7 @@ requests.memory  0     500Mi
 Abra o arquivo `resources/pod-limit-range.yaml`{{open}} e execute as tarefas abaixo:
 1. Altere o container 01 e defina limites mínimo e máximo de cpu/memória. Os limites devem corresponder a 60% dos valores definidos na política de cota.
 2. Crie a pod no namespace *quota-test*.
-3. Verifique o consumo da cota do namespace *quota-test*. Deve ter uma saída semelhante :
+3. Verifique o consumo da cota do namespace *quota-test*. Deve ter uma saída semelhante a:
 ```
 Name:            quota-mem-cpu
 Namespace:       quota-test

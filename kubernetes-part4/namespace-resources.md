@@ -4,9 +4,9 @@ Essa configuração é denominada [Limit Range](https://kubernetes.io/docs/conce
 Características: 
 - É definido através de um kind *LimitRange*;
 - Somente é permitido um único objeto do tipo *LimitRange* por namespace;
-- Garante que os limites definidos por namespace (mínimo e/ou máximo) não sejam excedidos pelos containers;
-- Podem ser aplicados à pods, containers e pvcs (persistentVolumeClaims).
-- As regras de limite são avaliadas antes que as pods sejam admitidas no node;
+- Garante que os limites definidos por namespace (mínimo e/ou máximo) não sejam excedidos;
+- Podem ser aplicados à pods, containers e pvcs (persistentVolumeClaims);
+- As regras de limite são avaliadas antes que as pods sejam admitidas no node.
 
 **Dica**: 
 - Não defina apenas o valor de *CPU/Memory Limit*. Se isso ocorrer, o kubernetes associará o valor de *CPU/Memory* Limit ao valor de *CPU/Memory Request*.

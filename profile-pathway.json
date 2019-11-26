@@ -19,11 +19,6 @@
         "title": "04. Kubernetes - Compute Resources / Horizontal Pod Autoscaler",
         "description": "Conceituação e exemplos práticos de recursos de cpu e memória e 'auto scaling' de pods",
         "id": "kubernetes-part4"
-      },
-      {
-        "title": "WIP - 05. Kubernetes - Estratégias de Deployment",
-        "description": "Conceituação e exemplos práticos de estratégias de deployment",
-        "id": "kubernetes-part5"
       }
     ],
     "scenarios": []

@@ -9,3 +9,7 @@ Comandos básicos:
 - `kubectl get ns <namespace>`
 - `kubectl create ns <namespace>`
 - `kubectl describe ns <namespace>`
+
+Obter eventos de um namespace: 
+- `kubectl -n <namespace> get events`
+- `kubectl -n <namespace> get events --sort-by='{.lastTimestamp}'` *# obtém eventos ordenando por data/hora da primeira ocorrência*

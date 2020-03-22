@@ -15,7 +15,10 @@ Verificar detalhes sobre o cluster:
 - `kubectl get componentstatus`{{execute}}
 - `kubectl describe node minikube`{{execute}}
 
-Listar eventos do cluster: `kubectl get events`{{execute}}
+Listar eventos do cluster: 
+
+- `kubectl get events`{{execute}}
+- `kubectl get events --sort-by='{.lastTimestamp}'`{{execute}}
 
 Comandos básicos para recursos do cluster:
 - Criação: `kubectl create <resource type> <resource name>`  (ex: *kubectl create namespace teste*)
@@ -23,6 +26,7 @@ Comandos básicos para recursos do cluster:
 - Listar recurso específico: `kubectl get <resource type> <resource name>` (ex: *kubectl get namespace teste*)
 - Listar referenciando informações de infra: `kubectl get <resource type> -o wide` (ex: *kubectl -n kube-system get pods -o wide*)
 - Listar recursos de todos namespaces: `kubectl get <resource type> --all-namespaces -o wide` (ex: *kubectl get pods --all-namespaces -o wide*)
+- Listar recursos de todos namespaces: `kubectl get <resource type> -A -o wide` (ex: *kubectl get pods -A -o wide*)
 - Descrever com detalhes: `kubectl describe <resource type> <resource name>` (ex: *kubectl describe namespace teste*)
 - Edição: `kubectl edit <resource type> <resource name>` (ex: *kubectl edit namespace teste*)
 - Exclusão: `kubectl delete <resource type> <resource name>` (ex: *kubectl delete namespace teste*)

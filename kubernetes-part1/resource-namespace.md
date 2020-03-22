@@ -12,4 +12,4 @@ Comandos básicos:
 
 Obter eventos de um namespace: 
 - `kubectl -n <namespace> get events`
-- `kubectl -n <namespace> get events --sort-by='{.lastTimestamp}'` *# obtém eventos ordenando por data/hora da primeira ocorrência*
+- `kubectl -n <namespace> get events --sort-by='{.lastTimestamp}'` *# obtém eventos ordenando por data/hora da última ocorrência*

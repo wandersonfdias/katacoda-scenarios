@@ -1,10 +1,5 @@
-# Interactive Katacoda Scenarios
+# Treinamentos de Kubernetes utilizando a plataforma Katacoda
 
 [![](http://shields.katacoda.com/katacoda/wandersondias/count.svg)](https://www.katacoda.com/wandersondias "Get your profile on Katacoda.com")
 
-Visit https://www.katacoda.com/wandersondias to view the profile and interactive scenarios
-
-### Writing Scenarios
-Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
-
-For examples, visit https://github.com/katacoda/scenario-example
+Acesse https://www.katacoda.com/wandersondias para realizar os treinamentos.

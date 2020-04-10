@@ -1,4 +1,7 @@
-[Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) é uma forma declarativa para realizar atualização de pods e [replicasets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/).
+[Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) é uma forma declarativa para realizar atualização de pods e replicasets.
+
+[Replicasets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/), por sua vez, têm a missão de garantir que a especificação declarativa feita pelo deployment seja atendida.
+Ou seja, precisa garantir que o conjunto de pods solicitado esteja em execução e estável.
 
 Cada novo rollout de um deploy gera uma nova numeração de revisão no k8s.
 

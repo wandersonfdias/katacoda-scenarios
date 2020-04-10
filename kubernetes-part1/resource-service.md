@@ -29,7 +29,7 @@ spec:
 4. Define as portas expostas para o service.
 5. Define o nome da porta exporta para o service (ex: http, https).
 6. Define o [protocolo](https://kubernetes.io/docs/concepts/services-networking/service/#protocol-support) de exposição da porta. Caso não seja informado, *TCP* será o valor padrão.
-- Protocolos disponíveis: TCP, UDP, HTTP, PROXY, SCTP.
+  - Protocolos disponíveis: TCP, UDP, HTTP, PROXY, SCTP.
 7. Define os containers que subirão em cada pod criada para esse deployment.
 8. Define a [porta](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport) do node que será exposta através de um ip estático em cada node do cluster. 
 9. Define o [tipo](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) do service que será exposto.

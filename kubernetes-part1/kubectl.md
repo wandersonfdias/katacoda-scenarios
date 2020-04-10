@@ -36,4 +36,10 @@ Como boa prática, sempre que formos executar qualquer comando básico, é indic
 - `kubectl -n teste get pods -o wide`
 - `kubectl -n teste get services`
 
-Mais comandos do kubectl podem ser encontrados no [link](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands).
+Mais comandos do kubectl podem ser encontrados em:
+
+- Dicas: <https://kubernetes.io/pt/docs/reference/kubectl/cheatsheet>
+- Principais Operações: <https://kubernetes.io/docs/reference/kubectl/overview/#operations>
+- Principais Recursos: <https://kubernetes.io/docs/reference/kubectl/overview/#resource-types>
+- JsonPath: <https://kubernetes.io/docs/reference/kubectl/jsonpath/>
+- Comandos detalhados: <https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands>

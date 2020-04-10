@@ -31,6 +31,13 @@ Comandos básicos para recursos do cluster:
 - Edição: `kubectl edit <resource type> <resource name>` (ex: *kubectl edit namespace teste*)
 - Exclusão: `kubectl delete <resource type> <resource name>` (ex: *kubectl delete namespace teste*)
 
+Obter informações sobre tipos de recursos do cluster e seus nomes abreviados:
+- `kubectl api-resources --help`{{execute}}
+- `kubectl api-resources`{{execute}}
+- `kubectl api-resources -o wide`{{execute}}
+- `kubectl api-resources --namespaced=true`{{execute}}
+- `kubectl api-resources --namespaced=false`{{execute}}
+
 Como boa prática, sempre que formos executar qualquer comando básico, é indicado informar o namespace onde se encontra o recurso. Vide exemplos:
 - `kubectl -n teste get pods`
 - `kubectl -n teste get pods -o wide`

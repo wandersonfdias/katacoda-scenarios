@@ -9,7 +9,7 @@ Por exemplo, consideremos o namespace *development* e o service *order*. O mesmo
   - order.development
   - order.development.svc
   - order.development.svc.cluster.local
-  - order.development.svc.\<cluster FQDN\> 
+  - order.development.svc.```<cluster FQDN>```
 
 ## Estrutura básica de um service
 

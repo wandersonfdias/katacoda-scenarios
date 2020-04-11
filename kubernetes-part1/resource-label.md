@@ -38,12 +38,14 @@ Opções para filtro:
   - `kubectl -n kube-system get pod -l tier,component`{{execute}}
 - *obter recursos que não possuam o label*
   - `kubectl -n kube-system get pod -l "! k8s-app"`{{execute}}  
-- **=** ou **==**
-  - `kubectl -n kube-system get pod -l k8s-app=kube-proxy`{{execute}}  
-- **!=**
-  - `kubectl -n kube-system get pod -l k8s-app!=kube-proxy`{{execute}}
-- **in**
-  - `kubectl -n kube-system get pod -l "k8s-app in (kube-proxy)"`{{execute}}
-- **notin**
-  - `kubectl -n kube-system get pod -l "k8s-app notin (kube-proxy)"`{{execute}}
-  - `kubectl -n kube-system get pod -l "k8s-app, k8s-app notin (kube-proxy)"`{{execute}}
+  - **=** ou **==**
+    - `kubectl -n kube-system get pod -l k8s-app=kube-proxy`{{execute}}  
+  - **!=**
+    - `kubectl -n kube-system get pod -l k8s-app!=kube-proxy`{{execute}}
+  - **in**
+    - `kubectl -n kube-system get pod -l "k8s-app in (kube-proxy)"`{{execute}}
+  - **notin**
+    - `kubectl -n kube-system get pod -l "k8s-app notin (kube-proxy)"`{{execute}}
+    - `kubectl -n kube-system get pod -l "k8s-app, k8s-app notin (kube-proxy)"`{{execute}}
+- *obter recursos, retornando labels como colunas*
+  - `kubectl -n kube-system get pod -l tier,component --label-columns=tier,component`{{execute}}
